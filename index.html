@@ -8,7 +8,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<style>
+/* indispensable : la page d'ouverture ne s'affiche jamais sans sa mise en forme, même si la feuille de style est en cache */
+.intro{display:none}
+.intro-actif .intro{display:block;position:fixed;inset:0;z-index:300;overflow:hidden;background:#0F2236}
+.intro-actif body{overflow:hidden}
+.intro__fond{position:absolute;inset:0;background-size:cover}
+.avis-pastille,.avis-carte,.avis__lien,.puce--lien{text-decoration:none}
+</style>
+<link rel="stylesheet" href="css/style.css?v=20261018a">
 </head>
 <body>
 <script>if(!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('intro-actif')</script>
@@ -310,6 +318,6 @@
   </div>
 </aside>
 
-<script src="js/main.js"></script>
+<script src="js/main.js?v=20261018a"></script>
 </body>
 </html>
