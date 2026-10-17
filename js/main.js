@@ -1,10 +1,10 @@
 (function(){
   var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 
-  /* ---------- page d'ouverture : disparaît seule après 2,6 s ou au clic ---------- */
+  /* ---------- page d'ouverture : disparaît seule après 2 s ---------- */
   var intro=$('#intro'),racine=document.documentElement;
   function finIntro(){if(!racine.classList.contains('intro-actif'))return;racine.classList.add('intro-sortie');setTimeout(function(){racine.classList.remove('intro-actif','intro-sortie');if(intro)intro.remove()},800)}
-  if(racine.classList.contains('intro-actif')){setTimeout(finIntro,2600);intro.addEventListener('click',finIntro);window.addEventListener('keydown',finIntro,{once:true})}else if(intro){intro.remove()}
+  if(racine.classList.contains('intro-actif')){setTimeout(finIntro,2000);intro.addEventListener('click',finIntro);window.addEventListener('keydown',finIntro,{once:true})}else if(intro){intro.remove()}
 
   /* ---------- menu ---------- */
   var entete=$('#entete'),menu=$('#menu'),burger=$('#burger');
