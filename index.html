@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Un brin d'Ardèche : maison avec sauna et cabane tonneau à Saint-Prix</title>
 <meta name="description" content="Maison de campagne pour 8 personnes à Saint-Prix, dans les Monts d'Ardèche, avec sauna au bois, cabane tonneau, four à pizza et Dolce Via à moins de 1 km.">
+<link rel="preload" as="image" href="images/intro.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap" rel="stylesheet">
@@ -16,12 +17,13 @@
 .intro__fond{position:absolute;inset:0;background-size:cover}
 .avis-pastille,.avis-carte,.avis__lien,.puce--lien{text-decoration:none}
 </style>
-<link rel="stylesheet" href="css/style.css?v=20261018a">
+<link rel="stylesheet" href="css/style.css?v=20261018b">
 </head>
 <body>
 <script>if(!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('intro-actif')</script>
 <div class="intro" id="intro" aria-hidden="true">
-  <div class="intro__fond" style="background-image:url(images/hero-maison.jpg);background-position:70% 40%"></div>
+  <div class="intro__fond"><img src="images/intro.jpg" alt="" width="1600" height="900" fetchpriority="high" decoding="async"></div>
+  <div class="intro__voile"></div>
   <div class="intro__txt"><div class="intro__nom">Un brin d'Ardèche</div></div>
 </div>
 
@@ -318,6 +320,6 @@
   </div>
 </aside>
 
-<script src="js/main.js?v=20261018a"></script>
+<script src="js/main.js?v=20261018b"></script>
 </body>
 </html>

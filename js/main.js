@@ -3,7 +3,7 @@
 
   /* ---------- page d'ouverture : disparaît seule après 2 s ---------- */
   var intro=$('#intro'),racine=document.documentElement;
-  function finIntro(){if(!racine.classList.contains('intro-actif'))return;racine.classList.add('intro-sortie');setTimeout(function(){racine.classList.remove('intro-actif','intro-sortie');if(intro)intro.remove()},800)}
+  function finIntro(){if(!racine.classList.contains('intro-actif'))return;racine.classList.add('intro-sortie','hero-entree');setTimeout(function(){racine.classList.remove('intro-actif','intro-sortie');if(intro)intro.remove();setTimeout(function(){racine.classList.remove('hero-entree')},1400)},900)}
   if(racine.classList.contains('intro-actif')){setTimeout(finIntro,2000);intro.addEventListener('click',finIntro);window.addEventListener('keydown',finIntro,{once:true})}else if(intro){intro.remove()}
 
   /* ---------- menu ---------- */

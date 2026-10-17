@@ -328,17 +328,7 @@ body.tiroir-ouvert{overflow:hidden}
 @media(max-width:900px){.contact__grille{grid-template-columns:1fr}}
 @media(max-width:480px){.infos{grid-template-columns:1fr}}
 
-.intro{display:none}
-.intro-actif .intro{display:grid;position:fixed;inset:0;z-index:300;place-items:center;overflow:hidden;background:var(--nuit-2);cursor:pointer;transition:transform .8s cubic-bezier(.7,0,.2,1)}
-.intro-actif body{overflow:hidden}
-.intro__fond{position:absolute;inset:0;background-size:cover;animation:introZoom 3.2s ease-out forwards}
-.intro__fond:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at center,rgba(15,34,54,.35),rgba(15,34,54,.78))}
-.intro__txt{position:relative;text-align:center;color:#fff;padding:0 24px;animation:introTxt 1s .25s both ease-out}
-.intro__sur{display:block;font-size:14px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;opacity:.9;margin-bottom:16px}
-.intro__nom{font-family:var(--ft);font-weight:700;font-size:clamp(40px,8vw,96px);line-height:1.05;letter-spacing:-.02em}
-.intro-sortie .intro{transform:translateY(-100%)}
-@keyframes introZoom{from{transform:scale(1.14)}to{transform:scale(1)}}
-@keyframes introTxt{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
 a.avis-pastille{color:#fff;text-decoration:none;transition:background .2s}
 .avis__tete{justify-content:space-between}
 .avis__lien{display:flex;gap:20px;align-items:center;text-decoration:none;color:inherit;padding:6px 14px 6px 6px;border-radius:var(--rayon);transition:background .2s}
@@ -346,17 +336,27 @@ a.avis-pastille{color:#fff;text-decoration:none;transition:background .2s}
 .puce--lien{text-decoration:none;color:var(--nuit);transition:background .2s,color .2s}
 a.avis-carte{color:inherit;text-decoration:none;transition:transform .25s,box-shadow .25s}
 .avis-carte__voir{display:block;margin-top:8px;color:var(--volet);font-weight:700;font-size:14px}
-@media(prefers-reduced-motion:reduce){.intro__fond,.intro__txt{animation:none}}
 
-.intro__fond{animation:none}
-.intro__fond:after{background:rgba(15,34,54,.38)}
-.intro__txt{animation:none}
-.intro-actif .intro{transition:transform .7s cubic-bezier(.7,0,.3,1)}
-a.avis-carte,a.avis-carte *,.avis__lien,.avis__lien *,.puce--lien,a.avis-pastille{text-decoration:none!important}
 
-.intro-actif .intro{display:grid;place-items:center;cursor:default;transition:transform .8s cubic-bezier(.7,0,.3,1)}
-.intro-sortie .intro{transform:translateY(-100%)}
-.intro__txt{position:relative;z-index:1}
 a.avis-pastille,.avis__lien,.puce--lien,a.avis-carte{transition:transform .25s ease}
 a.avis-pastille:hover,.avis__lien:hover,.puce--lien:hover{transform:scale(1.06)}
 a.avis-carte:hover{transform:scale(1.04)}
+
+.intro{display:none}
+.intro-actif .intro{display:grid;position:fixed;inset:0;z-index:300;place-items:center;overflow:hidden;background:var(--nuit-2);will-change:transform;transform:translateY(0);transition:transform .9s cubic-bezier(.76,0,.24,1)}
+.intro-sortie .intro{transform:translateY(-100%)}
+.intro__fond{position:absolute;inset:0;animation:introFondu .7s ease-out both}
+.intro__fond img{width:100%;height:100%;object-fit:cover;object-position:70% 40%;animation:introZoom 3.2s ease-out both}
+.intro__voile{position:absolute;inset:0;background:radial-gradient(closest-side,rgba(15,34,54,.5),rgba(15,34,54,0)) center/90% 70% no-repeat,rgba(15,34,54,.36)}
+.intro__txt{position:relative;text-align:center;color:#fff;padding:0 24px;animation:introTxt .8s .3s ease-out both}
+.intro__nom{font-family:var(--ft);font-weight:700;font-size:clamp(40px,8vw,96px);line-height:1.05;letter-spacing:-.02em;text-shadow:0 2px 24px rgba(15,34,54,.35)}
+@keyframes introFondu{from{opacity:0}to{opacity:1}}
+@keyframes introZoom{from{transform:scale(1)}to{transform:scale(1.07)}}
+@keyframes introTxt{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero-entree .hero__corps>*{animation:heroEntree .9s ease-out both}
+.hero-entree .hero__corps>*:nth-child(2){animation-delay:.08s}
+.hero-entree .hero__corps>*:nth-child(3){animation-delay:.16s}
+.hero-entree .hero__corps>*:nth-child(4){animation-delay:.24s}
+.hero-entree .hero__points{animation:heroEntree .9s .3s ease-out both}
+@keyframes heroEntree{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.intro__fond,.intro__fond img,.intro__txt{animation:none}}
