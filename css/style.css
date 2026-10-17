@@ -357,6 +357,5 @@ a.avis-carte:hover{transform:scale(1.04)}
 .hero-entree .hero__corps>*:nth-child(2){animation-delay:.08s}
 .hero-entree .hero__corps>*:nth-child(3){animation-delay:.16s}
 .hero-entree .hero__corps>*:nth-child(4){animation-delay:.24s}
-.hero-entree .hero__points{animation:heroEntree .9s .3s ease-out both}
 @keyframes heroEntree{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.intro__fond,.intro__fond img,.intro__txt{animation:none}}
