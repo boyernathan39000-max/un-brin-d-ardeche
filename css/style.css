@@ -359,3 +359,12 @@ a.avis-carte:hover{transform:scale(1.04)}
 .hero-entree .hero__corps>*:nth-child(4){animation-delay:.24s}
 @keyframes heroEntree{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.intro__fond,.intro__fond img,.intro__txt{animation:none}}
+
+.infos{grid-template-columns:repeat(4,1fr);gap:6px;align-self:center;background:rgba(255,255,255,.1);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.3);border-radius:28px;padding:26px 14px}
+.info{background:none;backdrop-filter:none;border:0;border-radius:0;padding:0;align-items:center;text-align:center;gap:10px}
+.info:hover{background:none;transform:none}
+.info__ico{width:64px;height:64px;border-radius:50%;background:#fff;color:var(--volet);margin:0;box-shadow:0 6px 18px rgba(0,0,0,.18);transition:transform .25s}
+.info:hover .info__ico,.info:focus-visible .info__ico{transform:scale(1.1)}
+.info__ico svg{width:28px;height:28px}
+.info b{font-size:16px;font-weight:600}
+@media(max-width:480px){.infos{grid-template-columns:repeat(4,1fr);padding:20px 8px}.info__ico{width:54px;height:54px}.info b{font-size:13px}}
