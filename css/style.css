@@ -383,3 +383,10 @@ a.avis-carte:hover{transform:scale(1.04)}
 @keyframes avisDefile{to{transform:translateX(calc(-50% - 8px))}}
 @media(prefers-reduced-motion:reduce){.avis-defile__piste{animation:none}.avis-defile{overflow-x:auto;-webkit-mask-image:none;mask-image:none}}
 @media(max-width:480px){.contact__gauche .infos{grid-template-columns:repeat(3,1fr)}.avis-defile__carte{width:260px}}
+.avis-defile{flex-direction:column;align-items:flex-start;justify-content:center;gap:22px;padding:22px 0 26px}
+.avis-defile__tete{display:flex;align-items:center;gap:14px;margin:0 24px;color:#fff;text-decoration:none;font-size:15px;transition:transform .25s}
+.avis-defile__tete:hover{transform:scale(1.05)}
+.avis-defile__tete b{font-family:var(--ft);font-size:34px;line-height:1}
+.avis-defile__etoiles{color:#F6C945;letter-spacing:2px;font-size:18px;line-height:1}
+.avis-defile__tete .avis-defile__etoiles{font-size:22px}
+.avis-defile__carte{padding-top:18px}
