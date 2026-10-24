@@ -1,7 +1,7 @@
 :root{
   --ecru:#F4F1EA;--ciel:#D5E2F0;--volet:#416F9E;--volet-clair:#7BA3CB;--nuit:#172F47;--nuit-2:#0F2236;
   --texte:#172F47;--doux:#4C5E70;--blanc:#fff;
-  --ft:'Bricolage Grotesque',system-ui,sans-serif;--fc:'Albert Sans',system-ui,sans-serif;
+  --ft:'Fraunces',Georgia,serif;--fc:'Albert Sans',system-ui,sans-serif;
   --rayon:20px;--ombre:0 10px 34px rgba(23,47,71,.14);--w:1180px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -390,3 +390,57 @@ a.avis-carte:hover{transform:scale(1.04)}
 .avis-defile__etoiles{color:#F6C945;letter-spacing:2px;font-size:18px;line-height:1}
 .avis-defile__tete .avis-defile__etoiles{font-size:22px}
 .avis-defile__carte{padding-top:18px}
+
+
+.logo .chat{width:30px;height:30px;flex:none}
+.section{position:relative}
+.section:after{content:"";position:absolute;right:28px;bottom:22px;width:48px;height:48px;opacity:.7;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Cpath d=%22M20 3c-2 0-3 1-3.500 2.500C12 6 8 9 7 14c-1.500 6 .5 13 5 18 2.500 2.800 5.300 4.500 8 4.500s5.500-1.700 8-4.500c4.500-5 6.500-12 5-18-1-5-5-8-9.500-8.500C23 4 22 3 20 3z%22 fill=%22%237A4A26%22/%3E%3Cpath d=%22M12 24c2 5 5 8 8 8s6-3 8-8c-3 2-5.500 2.500-8 2.500S15 26 12 24z%22 fill=%22%23A8693A%22/%3E%3Cpath d=%22M20 3c-1 3-1 5 0 8M15 7l2 3M25 7l-2 3%22 stroke=%22%235B3719%22 stroke-width=%221.500%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3Cpath d=%22M16 15c1 4 1 7 0 9%22 stroke=%22%23fff%22 stroke-opacity=%22.25%22 stroke-width=%222%22 stroke-linecap=%22round%22 fill=%22none%22/%3E%3C/svg%3E") center/contain no-repeat;transform:rotate(14deg)}
+.fonce:after{opacity:.9}
+.section--clair{background:#FBF9F5}
+.chambres-bloc{display:grid;grid-template-columns:minmax(300px,380px) minmax(0,1fr);gap:24px;align-items:stretch}
+.chambres-bloc .couchages{padding:34px 32px}
+.chambres-bloc .couchages h3{font-size:28px}
+.chambres-bloc .couchages li{font-size:17px}
+.chcar{position:relative;border-radius:var(--rayon);box-shadow:var(--ombre);background:#fff;min-width:0}
+.chcar__piste{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:var(--rayon);height:100%}
+.chcar__piste::-webkit-scrollbar{display:none}
+.chcar__slide{position:relative;flex:0 0 100%;scroll-snap-align:start;border:0;padding:0;background:var(--nuit);cursor:pointer;overflow:hidden;min-height:440px;font-family:inherit;color:#fff;text-align:left}
+.chcar__slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.chcar__slide:after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(0deg,rgba(15,34,54,.78),rgba(15,34,54,0))}
+.chcar__legende{position:absolute;left:28px;bottom:24px;z-index:2;display:flex;flex-direction:column;gap:2px}
+.chcar__nom{font-family:var(--ft);font-weight:700;font-size:clamp(24px,3vw,34px);line-height:1.1}
+.chcar__sous{font-weight:600;font-size:16px;opacity:.92}
+.chcar__mention{position:absolute;top:20px;left:24px;z-index:2;background:var(--ciel);color:var(--nuit);font-weight:700;padding:8px 18px;border-radius:999px;font-size:15px}
+.chcar__slide .voir{position:absolute;right:20px;bottom:22px;z-index:2}
+.chcar__fl{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:50px;height:50px;border-radius:50%;border:0;background:#fff;color:var(--nuit);font-size:28px;line-height:1;cursor:pointer;box-shadow:var(--ombre);transition:background .2s,color .2s}
+.chcar__fl:hover{background:var(--volet);color:#fff}
+.chcar__fl--g{left:14px}.chcar__fl--d{right:14px}
+.chcar__points{position:absolute;top:18px;right:22px;z-index:3;display:flex;gap:8px}
+.chcar__points button{width:11px;height:11px;border-radius:50%;border:2px solid #fff;background:transparent;padding:0;cursor:pointer}
+.chcar__points button.est-actif{background:#fff}
+.equip-boite{width:min(980px,100%)}
+.equip-corps{padding:6px 24px 26px;overflow-y:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:22px 34px}
+.equip-cat h4{font-family:var(--ft);font-size:19px;color:var(--volet);margin-bottom:8px}
+.equip-cat ul{list-style:none;display:grid;gap:6px}
+.equip-cat li{position:relative;padding-left:20px;font-size:16px}
+.equip-cat li:before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--volet)}
+@media(max-width:900px){.chambres-bloc{grid-template-columns:1fr}.chcar__slide{min-height:300px}.equip-corps{grid-template-columns:1fr}.chcar__fl{width:42px;height:42px}.section:after{width:36px;height:36px;right:16px;bottom:14px}}
+
+.tiroir:not(.est-ouvert){box-shadow:none}
+
+.entete__cta{display:flex;align-items:center;gap:12px;justify-content:flex-end}
+.langue{position:relative}
+.langue__btn{display:flex;align-items:center;gap:7px;height:40px;padding:0 12px;border-radius:999px;border:1.5px solid rgba(255,255,255,.7);background:rgba(255,255,255,.12);color:#fff;font-family:inherit;font-weight:700;font-size:14px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.langue__btn svg:first-child{border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+.entete.est-plein .langue__btn{border-color:var(--volet);color:var(--volet);background:#fff}
+.langue__btn:hover{background:rgba(255,255,255,.28)}
+.entete.est-plein .langue__btn:hover{background:var(--ciel)}
+.langue__liste{position:absolute;right:0;top:calc(100% + 8px);min-width:170px;background:#fff;border-radius:14px;box-shadow:var(--ombre);padding:6px;z-index:60}
+.langue__liste[hidden]{display:none}
+.langue__liste button{display:flex;align-items:center;gap:10px;width:100%;padding:10px 12px;border:0;background:none;border-radius:10px;font-family:inherit;font-size:15px;font-weight:600;color:var(--nuit);cursor:pointer;text-align:left}
+.langue__liste button:hover{background:var(--ciel)}
+.langue__liste button svg:first-child{border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.12);flex:none}
+.langue__liste button span{flex:1}
+.langue__coche{opacity:0;color:var(--volet)}
+.langue__liste button.est-actif .langue__coche{opacity:1}
+@media(max-width:900px){.entete__cta{display:flex}.entete__cta .btn{display:none}.entete__in{grid-template-columns:1fr auto auto}.langue{margin-right:8px}}
