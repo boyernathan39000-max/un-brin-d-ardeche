@@ -70,7 +70,7 @@
     salon:{t:'Le salon',p:[['salon','Salon avec canapé et mur en bois'],['salon-2','Le salon et son éclairage'],['salon-3','Le salon et l\'escalier']]},
     cuisine:{t:'La cuisine',p:[['cuisine','Cuisine équipée'],['cuisine-bar','Cuisine avec bar et tabourets']]},
     sdb:{t:'La salle de bain',p:[['sdb','Salle de bain avec fenêtre de toit'],['sdb2','Salle de bain, vasque et WC']]},
-    galerie:{t:'Galerie',p:[['tonneaux-haut','Vue du ciel sur la maison de pierre et sa terrasse'],['sejour-large','Le séjour et la cuisine'],['cabane-int','L\'intérieur de la cabane tonneau'],['jardin','Le jardin fleuri avec sa pergola bleue'],['salon','Le salon avec canapé et mur en bois'],['terrasse-facade','La terrasse couverte et le four à pizza'],['hero-tonneaux','Le sauna et la cabane tonneau au milieu des fleurs'],['chb3-1','Une chambre avec lit double'],['cuisine-bar','La cuisine avec son bar']]}
+    galerie:{t:'Galerie',p:[['tonneaux-haut','Vue du ciel sur la maison de pierre et sa terrasse'],['sejour-large','Le séjour et la cuisine'],['cabane-int','L\'intérieur de la cabane tonneau'],['jardin','Le jardin fleuri avec sa pergola bleue'],['salon','Le salon avec canapé et mur en bois'],['terrasse-facade','La terrasse couverte et le four à pizza'],['galerie-cabanes','Le sauna et la cabane tonneau dans leur clairière'],['chb3-1','Une chambre avec lit double'],['cuisine-bar','La cuisine avec son bar']]}
   };
   var vis=$('#vis'),visImg=$('#vis-img'),visMini=$('#vis-mini'),visTitre=$('#vis-titre'),visCpt=$('#vis-cpt'),cur=null,pos=0,dernier=null;
   function montrer(n){

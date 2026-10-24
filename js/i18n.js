@@ -230,7 +230,7 @@
 "Le jardin fleuri avec sa pergola bleue":"The flower garden with its blue pergola",
 "Le salon avec canapé et mur en bois":"The lounge with sofa and wooden wall",
 "La terrasse couverte et le four à pizza":"The covered terrace and the pizza oven",
-"Le sauna et la cabane tonneau au milieu des fleurs":"The sauna and the barrel cabin among the flowers",
+"Le sauna et la cabane tonneau dans leur clairière":"The sauna and the barrel cabin in their clearing",
 "Une chambre avec lit double":"A bedroom with a double bed",
 "La cuisine avec son bar":"The kitchen with its bar",
 /* panneau de réservation, textes dynamiques */
