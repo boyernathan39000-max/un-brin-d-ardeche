@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Brin d'Ardèche : maison avec sauna et cabane tonneau à Saint-Prix</title>
 <meta name="description" content="Maison de campagne pour 8 personnes à Saint-Prix, dans les Monts d'Ardèche, avec sauna au bois, cabane tonneau, four à pizza et Dolce Via à moins de 1 km.">
-<link rel="preload" as="image" href="images/intro.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="images/vue-loin.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Jost:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* indispensable : la page d'ouverture ne s'affiche jamais sans sa mise en forme, même si la feuille de style est en cache */
 .intro{display:none}
@@ -17,12 +17,15 @@
 .intro__fond{position:absolute;inset:0;background-size:cover}
 .avis-pastille,.avis-carte,.avis__lien,.puce--lien{text-decoration:none}
 </style>
-<link rel="stylesheet" href="css/style.css?v=20261023d">
+<link rel="canonical" href="https://boyernathan39000-max.github.io/un-brin-d-ardeche/">
+<link rel="alternate" hreflang="fr" href="https://boyernathan39000-max.github.io/un-brin-d-ardeche/">
+<link rel="alternate" hreflang="en" href="https://boyernathan39000-max.github.io/un-brin-d-ardeche/en/">
+<link rel="stylesheet" href="css/style.css?v=20261024b">
 </head>
 <body>
 <script>if(!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('intro-actif')</script>
 <div class="intro" id="intro" aria-hidden="true">
-  <div class="intro__fond"><img src="images/intro.jpg" alt="" width="1600" height="900" fetchpriority="high" decoding="async"></div>
+  <div class="intro__fond"><img src="images/vue-loin.jpg" alt="" width="1600" height="900" fetchpriority="high" decoding="async"></div>
   <div class="intro__voile"></div>
   <div class="intro__txt"><div class="intro__nom">Brin d'Ardèche</div></div>
 </div>
@@ -30,7 +33,7 @@
 <header class="entete" id="entete">
   <div class="entete__in">
     <a class="logo" href="#top" aria-label="Brin d'Ardèche, accueil">
-      Brin d'Ardèche
+      <img class="logo__chat" src="images/chataigne.svg" alt="" width="30" height="30">Brin d'Ardèche
     </a>
     <nav aria-label="Menu principal">
       <ul class="menu" id="menu">
@@ -42,14 +45,14 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="entete__cta"><button class="btn" data-reserver>Réserver</button></div>
+    <div class="entete__cta"><a class="langue" href="en/" hreflang="en" lang="en" aria-label="English version">EN</a><button class="btn" data-reserver>Réserver</button></div>
     <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
 
 <section class="hero" id="top">
   <div class="hero__bg" aria-hidden="true">
-    <div class="hero__fond est-actif" style="background-image:url(images/hero-maison.jpg);background-position:85% 40%"></div>
+    <div class="hero__fond est-actif" style="background-image:url(images/vue-loin.jpg);background-position:center 45%"></div>
     <div class="hero__fond" style="background-image:url(images/hero-tonneaux.jpg)"></div>
     <div class="hero__fond" style="background-image:url(images/hero-soir.jpg)"></div>
   </div>
@@ -101,14 +104,14 @@
   </div>
 </section>
 
-<section class="section ciel" id="chambres">
+<section class="section" id="chambres">
   <div class="wrap">
     <div class="section__tete apparait">
       <span class="surtitre">Chambres et espaces communs</span>
       <h2>Quatre chambres pour huit personnes</h2>
-      <p>Trois lits doubles et deux lits simples pour dormir à huit. Cliquez sur une chambre ou sur un espace pour voir toutes ses photos.</p>
+      <p>Trois lits doubles et deux lits simples pour dormir à huit. Faites défiler les chambres puis cliquez sur une photo pour voir toutes les images.</p>
     </div>
-    <div class="cases cases--5">
+    <div class="chambres-ligne">
       <div class="couchages apparait">
         <h3>Les couchages</h3>
         <ul>
@@ -119,10 +122,17 @@
         </ul>
         <button class="btn btn--bloc" data-reserver>Vérifier les disponibilités</button>
       </div>
-      <button class="case apparait" data-album="ch1"><span class="case__titre">Chambre 1</span><img src="images/chambre-1.jpg" alt="Chambre 1, lit double et mur bleu canard" loading="lazy"><span class="case__pied"><b>1 lit double</b><span class="voir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-7 7"/></svg>3 photos</span></span></button>
-      <button class="case apparait" data-album="ch2"><span class="case__titre">Chambre 2</span><img src="images/chambre-3.jpg" alt="Chambre 2, deux lits simples" loading="lazy"><span class="case__pied"><b>2 lits simples</b><span class="voir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-7 7"/></svg>2 photos</span></span></button>
-      <button class="case apparait" data-album="ch3"><span class="case__titre">Chambre 3</span><img src="images/chambre-2.jpg" alt="Chambre 3, lit double et tête de lit en planches" loading="lazy"><span class="case__pied"><b>1 lit double</b><span class="voir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-7 7"/></svg>1 photo</span></span></button>
-      <button class="case apparait" data-album="ch4"><span class="case__titre">Chambre 4</span><img src="images/chambre-4.jpg" alt="Chambre 4, lit double aux murs verts" loading="lazy"><span class="case__pied"><b>1 lit double</b><span class="voir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-7 7"/></svg>2 photos</span></span></button>
+      <div class="carrousel apparait" id="carrousel" aria-roledescription="carrousel" aria-label="Les chambres et la cabane">
+        <div class="carrousel__piste" id="piste">
+          <button class="slide" data-album="ch1"><img src="images/chambre-1.jpg" alt="Chambre 1, lit double et mur bleu canard" loading="lazy"><span class="slide__pied"><span class="slide__titre">Chambre 1</span><span class="slide__sous">1 lit double</span></span></button>
+          <button class="slide" data-album="ch2"><img src="images/chambre-3.jpg" alt="Chambre 2, deux lits simples" loading="lazy"><span class="slide__pied"><span class="slide__titre">Chambre 2</span><span class="slide__sous">2 lits simples</span></span></button>
+          <button class="slide" data-album="ch3"><img src="images/chambre-2.jpg" alt="Chambre 3, lit double et tête de lit en planches" loading="lazy"><span class="slide__pied"><span class="slide__titre">Chambre 3</span><span class="slide__sous">1 lit double</span></span></button>
+          <button class="slide" data-album="ch4"><img src="images/chambre-4.jpg" alt="Chambre 4, lit double aux murs verts" loading="lazy"><span class="slide__pied"><span class="slide__titre">Chambre 4</span><span class="slide__sous">1 lit double</span></span></button>
+          <button class="slide" data-album="cabane"><img src="images/cabane-int.jpg" alt="L'intérieur de la cabane tonneau" loading="lazy"><span class="slide__badge">Osez l'expérience</span><span class="slide__pied"><span class="slide__titre">La cabane tonneau</span><span class="slide__sous">2 couchages dans la cabane</span></span></button>
+        </div>
+        <button class="carrousel__fl carrousel__fl--g" id="car-g" aria-label="Chambre précédente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></button>
+        <button class="carrousel__fl carrousel__fl--d" id="car-d" aria-label="Chambre suivante"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></button>
+      </div>
     </div>
 
     <h3 class="sous-titre apparait">Les espaces communs</h3>
@@ -132,20 +142,7 @@
       <button class="case apparait" data-album="cuisine"><span class="case__titre">La cuisine</span><img src="images/cuisine.jpg" alt="Cuisine équipée" loading="lazy"><span class="case__pied"><b>Cuisine équipée</b><span class="voir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-7 7"/></svg>2 photos</span></span></button>
       <button class="case apparait" data-album="sdb"><span class="case__titre">La salle de bain</span><img src="images/sdb.jpg" alt="Salle de bain avec fenêtre de toit" loading="lazy"><span class="case__pied"><b>Douche et 2 WC</b><span class="voir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-7 7"/></svg>2 photos</span></span></button>
     </div>
-    <div class="equip apparait">
-      <span class="puce">Cuisine équipée</span>
-      <span class="puce">Lave-vaisselle</span>
-      <span class="puce">Réfrigérateur</span>
-      <span class="puce">Four à micro-ondes</span>
-      <span class="puce">Machine à café</span>
-      <span class="puce">Bouilloire électrique</span>
-      <span class="puce">Table à manger</span>
-      <span class="puce">Poêle à bois</span>
-      <span class="puce">Télévision à écran plat</span>
-      <span class="puce">Lave-linge</span>
-      <span class="puce">Douche</span>
-      <span class="puce">2 WC</span>
-    </div>
+    <div class="centre apparait" style="margin-top:34px"><button class="btn btn--contour-fonce" id="equip-ouvrir" aria-haspopup="dialog">Voir tous les équipements</button></div>
   </div>
 </section>
 
@@ -258,6 +255,20 @@
   </div>
 </section>
 
+
+<div class="equipements" id="equipements" hidden role="dialog" aria-modal="true" aria-labelledby="equip-titre">
+  <div class="equipements__boite">
+    <button class="equipements__x" id="equip-fermer" aria-label="Fermer">&times;</button>
+    <h2 id="equip-titre">Tous les équipements</h2>
+    <div class="equipements__grille">
+      <div><h3>Cuisine et repas</h3><ul><li>Cuisine équipée</li><li>Lave-vaisselle</li><li>Réfrigérateur</li><li>Four à micro-ondes</li><li>Machine à café</li><li>Bouilloire électrique</li><li>Table à manger</li></ul></div>
+      <div><h3>Confort</h3><ul><li>Poêle à bois</li><li>Télévision à écran plat</li><li>Lave-linge</li><li>Douche</li><li>2 WC</li><li>Lit bébé gratuit (0 à 3 ans)</li></ul></div>
+      <div><h3>Dehors</h3><ul><li>Grande terrasse en partie couverte avec patio</li><li>Plancha et barbecue</li><li>Four à pizza au bois</li><li>Sauna au bois avec douche extérieure</li><li>Cabane tonneau de 2 couchages</li><li>Table de ping-pong</li><li>Local à vélos fermé à clé</li><li>Parking privé gratuit</li></ul></div>
+      <div><h3>Bon à savoir</h3><ul><li>Animaux acceptés sur demande, sans supplément</li><li>Non-fumeur</li><li>Fêtes interdites</li><li>Draps et serviettes en supplément</li></ul></div>
+    </div>
+  </div>
+</div>
+
 <footer class="pied">
   <div class="wrap pied__in">
     <div><b>Brin d'Ardèche</b>655 chemin de la Chabanne, 07270 Saint-Prix (Ardèche)</div>
@@ -321,6 +332,6 @@
   </div>
 </aside>
 
-<script src="js/main.js?v=20261023d"></script>
+<script src="js/main.js?v=20261024b"></script>
 </body>
 </html>
