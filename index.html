@@ -17,7 +17,7 @@
 .intro__fond{position:absolute;inset:0;background-size:cover}
 .avis-pastille,.avis-carte,.avis__lien,.puce--lien{text-decoration:none}
 </style>
-<link rel="stylesheet" href="css/style.css?v=20261024a">
+<link rel="stylesheet" href="css/style.css?v=20261024b">
 </head>
 <body>
 <script>if(!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('intro-actif')</script>
@@ -30,7 +30,7 @@
 <header class="entete" id="entete">
   <div class="entete__in">
     <a class="logo" href="#top" aria-label="Brin d'Ardèche, accueil">
-      <svg class="chat" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3c-2 0-3 1-3.500 2.500C12 6 8 9 7 14c-1.500 6 .5 13 5 18 2.500 2.800 5.300 4.500 8 4.500s5.500-1.700 8-4.500c4.500-5 6.500-12 5-18-1-5-5-8-9.500-8.500C23 4 22 3 20 3z" fill="#7A4A26"/><path d="M12 24c2 5 5 8 8 8s6-3 8-8c-3 2-5.500 2.500-8 2.500S15 26 12 24z" fill="#A8693A"/><path d="M20 3c-1 3-1 5 0 8M15 7l2 3M25 7l-2 3" stroke="#5B3719" stroke-width="1.500" stroke-linecap="round" fill="none"/><path d="M16 15c1 4 1 7 0 9" stroke="#fff" stroke-opacity=".25" stroke-width="2" stroke-linecap="round" fill="none"/></svg><span>Brin d'Ardèche</span>
+      <svg class="chat" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M25 6.500c.8 1.800 1.400 2.800 3.500 3.700C34.500 12.800 38 18 38 24.500 38 31 32 35 24 35S10 31 10 24.500C10 17 15 12 20.500 10.200 22.800 9.400 23.800 8.600 25 6.500z"/><path d="M11.500 28c2.500 4.500 7 6 12.500 6s10-1.500 12.500-6c-3 1.800-7.500 2.800-12.500 2.800S14.500 29.800 11.500 28z"/><path d="M15.500 23c.4-4 2.400-7.200 5.500-9.200"/></svg><span>Brin d'Ardèche</span>
     </a>
     <nav aria-label="Menu principal">
       <ul class="menu" id="menu">
@@ -42,7 +42,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="entete__cta"><button class="btn" data-reserver>Réserver</button></div>
+    <div class="entete__cta"><a class="btn" href="#contact">Réserver</a></div>
     <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
@@ -51,14 +51,14 @@
   <div class="hero__bg" aria-hidden="true">
     <div class="hero__fond est-actif" style="background-image:url(images/vue-loin.jpg);background-position:50% 50%"></div>
     <div class="hero__fond" style="background-image:url(images/hero-tonneaux.jpg)"></div>
-    <div class="hero__fond" style="background-image:url(images/hero-soir.jpg)"></div>
+    <div class="hero__fond" style="background-image:url(images/hero-terrasse.jpg);background-position:50% 60%"></div>
   </div>
   <div class="hero__corps">
-    <a class="avis-pastille" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener" aria-label="Voir les 8 avis sur Google"><span class="etoiles" aria-hidden="true">★★★★★</span> 4,9 sur 5 · 8 avis Google</a>
+    <a class="avis-pastille" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir les 28 avis sur Airbnb"><span class="etoiles" aria-hidden="true">★★★★★</span> 5,0 sur 5 · 28 avis Airbnb</a>
     <h1>Ressourcez-vous en pleine nature avec un sauna au bois et une cabane tonneau</h1>
     <p class="hero__sous">Toute une maison de campagne pour 8 personnes, plein sud et sans voisin, au cœur des Monts d'Ardèche.</p>
     <div class="hero__boutons">
-      <button class="btn" data-reserver>Voir les disponibilités</button>
+      <a class="btn" href="#contact">Voir les disponibilités</a>
       <a class="btn btn--contour" href="#maison">Découvrir la maison</a>
     </div>
   </div>
@@ -90,13 +90,13 @@
         <span class="puce">Animaux acceptés sur demande</span>
       </div>
       <div class="hote">
-        <div class="hote__rond" aria-hidden="true">L</div>
+        <img class="hote__photo" src="images/lydie.jpg" alt="Lydie, votre hôte" width="120" height="120" loading="lazy">
         <div>
           <p>« Amoureuse de cette belle région, je mettrai tout en œuvre pour que vos vacances soient une réussite. »</p>
           <small>Lydie, votre hôte. Documentation à disposition, conseils et partage d'expérience.</small>
         </div>
       </div>
-      <button class="btn btn--marge" data-reserver>Réserver mon séjour</button>
+      <a class="btn btn--marge" href="#contact">Réserver mon séjour</a>
     </div>
   </div>
 </section>
@@ -117,7 +117,7 @@
           <li><span>Couchages dans la cabane tonneau</span><b>2</b></li>
           <li><span>Lit bébé (0 à 3 ans)</span><b>gratuit</b></li>
         </ul>
-        <button class="btn btn--bloc" data-reserver>Vérifier les disponibilités</button>
+        <a class="btn btn--bloc" href="#contact">Vérifier les disponibilités</a>
       </div>
       <div class="chcar apparait" id="chcar">
         <div class="chcar__piste" id="chcar-piste">
@@ -125,7 +125,7 @@
         <button class="chcar__slide" data-album="ch2" aria-label="Voir les photos : Chambre 2"><img src="images/chb2-1.jpg" alt="Chambre 2, deux lits simples" loading="lazy"><span class="chcar__legende"><span class="chcar__nom">Chambre 2</span><span class="chcar__sous">2 lits simples</span></span><span class="voir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-7 7"/></svg>5 photos</span></button>
         <button class="chcar__slide" data-album="ch3" aria-label="Voir les photos : Chambre 3"><img src="images/chb3-1.jpg" alt="Chambre 3, lit double et tête de lit en planches éclairée" loading="lazy"><span class="chcar__legende"><span class="chcar__nom">Chambre 3</span><span class="chcar__sous">1 lit double</span></span><span class="voir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-7 7"/></svg>2 photos</span></button>
         <button class="chcar__slide" data-album="ch4" aria-label="Voir les photos : Chambre 4"><img src="images/chb4-1.jpg" alt="Chambre 4, lit double et tête de lit en bois clair" loading="lazy"><span class="chcar__legende"><span class="chcar__nom">Chambre 4</span><span class="chcar__sous">1 lit double</span></span><span class="voir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-7 7"/></svg>5 photos</span></button>
-        <button class="chcar__slide" data-album="cabane" aria-label="Voir les photos : La cabane tonneau"><img src="images/cab-4.jpg" alt="La cabane tonneau et le sauna dans le jardin" loading="lazy"><span class="chcar__legende"><span class="chcar__nom">La cabane tonneau</span><span class="chcar__sous">2 couchages</span></span><span class="chcar__mention">Osez l'expérience</span><span class="voir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-7 7"/></svg>4 photos</span></button>
+        <button class="chcar__slide" data-album="cabane" aria-label="Voir les photos : La cabane tonneau"><img src="images/cab-1.jpg" alt="Intérieur de la cabane tonneau, lit double et fenêtre sur la nature" loading="lazy"><span class="chcar__legende"><span class="chcar__nom">La cabane tonneau</span><span class="chcar__sous">2 couchages</span></span><span class="chcar__mention">Osez l'expérience</span><span class="voir"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-7 7"/></svg>4 photos</span></button>
         </div>
         <button class="chcar__fl chcar__fl--g" id="chcar-g" aria-label="Chambre précédente">‹</button>
         <button class="chcar__fl chcar__fl--d" id="chcar-d" aria-label="Chambre suivante">›</button>
@@ -157,7 +157,7 @@
       <button class="panneau" style="background-image:url(images/terrasse-facade.jpg)"><span class="panneau__num">03</span><span class="panneau__txt"><h3>Le four à pizza</h3><p>Préparez vos pizzas dans le four à bois installé sous l'appentis, pour des soirées conviviales.</p></span></button>
       <button class="panneau" style="background-image:url(images/terrasse-table.jpg)"><span class="panneau__num">04</span><span class="panneau__txt"><h3>La terrasse</h3><p>Profitez de la terrasse plein sud et en partie couverte : patio, plancha, barbecue, grande table et table de ping-pong.</p></span></button>
     </div>
-    <div class="centre apparait"><button class="btn btn--clair" data-reserver>Réserver mon séjour</button></div>
+    <div class="centre apparait"><a class="btn btn--clair" href="#contact">Réserver mon séjour</a></div>
   </div>
 </section>
 
@@ -175,7 +175,7 @@
       <button data-album="galerie" data-i="4"><img src="images/salon.jpg" alt="Le salon avec canapé et mur en bois" loading="lazy"></button>
       <button class="g-large" data-album="galerie" data-i="5"><img src="images/terrasse-facade.jpg" alt="La terrasse couverte et le four à pizza" loading="lazy"></button>
       <button class="g-large" data-album="galerie" data-i="6"><img src="images/hero-tonneaux.jpg" alt="Le sauna et la cabane tonneau au milieu des fleurs" loading="lazy"></button>
-      <button data-album="galerie" data-i="7"><img src="images/chambre-2.jpg" alt="Une chambre avec lit double" loading="lazy"></button>
+      <button data-album="galerie" data-i="7"><img src="images/chb3-1.jpg" alt="Une chambre avec lit double" loading="lazy"></button>
       <button data-album="galerie" data-i="8"><img src="images/cuisine-bar.jpg" alt="La cuisine avec son bar" loading="lazy"></button>
     </div>
   </div>
@@ -189,10 +189,10 @@
       <p>Lamastre est à 8 km et Le Cheylard à 10 km. Voici quatre idées de sorties dans les environs.</p>
     </div>
     <div class="activites">
-      <article class="activite apparait" style="background-image:url(images/act-dolce.jpg)"><span class="activite__dist">Moins de 1 km</span><div><h3>La Dolce Via</h3><p>Roulez à vélo ou promenez-vous sur une voie douce aménagée et sécurisée. Le tronçon du Cheylard à Lamastre mesure près de 20 km.</p></div></article>
-      <article class="activite apparait" style="background-image:url(images/act-mastrou.jpg)"><span class="activite__dist">Départ à Lamastre</span><div><h3>Le Mastrou, train à vapeur</h3><p>Voyagez en train à vapeur sur 28 km, de Lamastre à Tournon-sur-Rhône, par les gorges du Doux. Le trajet passe par des ponts, des viaducs et des tunnels.</p></div></article>
-      <article class="activite apparait" style="background-image:url(images/act-gorges.jpg)"><span class="activite__dist">À 40 min en voiture</span><div><h3>Les gorges du Doux</h3><p>Un cadre sauvage pour le vélorail. La région propose aussi de la baignade et des sports d'eau vive.</p></div></article>
-      <article class="activite apparait" style="background-image:url(images/act-rando.jpg)"><span class="activite__dist">Pays de Lamastre</span><div><h3>Randonnées et nature</h3><p>Choisissez parmi 22 parcours de randonnée à pied et 3 circuits d'orientation gratuits à faire en famille.</p></div></article>
+      <article class="activite apparait" style="background-image:url(images/act-dolce.jpg)"><span class="activite__dist">Moins de 1 km</span><div><h3>La Dolce Via</h3><small class="credit">Photo : <a href="https://commons.wikimedia.org/wiki/File:Pont_dolce_via.jpg" target="_blank" rel="noopener">Robert Ferréol, CC BY-SA 4.0</a></small><p>Roulez à vélo ou promenez-vous sur une voie douce aménagée et sécurisée. Le tronçon du Cheylard à Lamastre mesure près de 20 km.</p></div></article>
+      <article class="activite apparait" style="background-image:url(images/act-mastrou.jpg)"><span class="activite__dist">Départ à Lamastre</span><div><h3>Le Mastrou, train à vapeur</h3><small class="credit">Photo : <a href="https://commons.wikimedia.org/wiki/File:Trains_du_Vivarais_dit_Le_Mastrou_03.jpg" target="_blank" rel="noopener">trams aux fils, CC BY 2.0</a></small><p>Voyagez en train à vapeur sur 28 km, de Lamastre à Tournon-sur-Rhône, par les gorges du Doux. Le trajet passe par des ponts, des viaducs et des tunnels.</p></div></article>
+      <article class="activite apparait" style="background-image:url(images/act-gorges.jpg)"><span class="activite__dist">À 40 min en voiture</span><div><h3>Les gorges du Doux</h3><small class="credit">Photo : <a href="https://commons.wikimedia.org/wiki/File:Gorges_du_Doux,_Ardèche.jpg" target="_blank" rel="noopener">Celeda, CC BY-SA 4.0</a></small><p>Un cadre sauvage pour le vélorail. La région propose aussi de la baignade et des sports d'eau vive.</p></div></article>
+      <article class="activite apparait" style="background-image:url(images/act-rando.jpg)"><span class="activite__dist">Pays de Lamastre</span><div><h3>Randonnées et nature</h3><small class="credit">Photo fournie par Lydie</small><p>Choisissez parmi 22 parcours de randonnée à pied et 3 circuits d'orientation gratuits à faire en famille.</p></div></article>
     </div>
     <div class="centre apparait"><a class="btn" href="https://www.pays-lamastre-tourisme.com/fr/profiter/" target="_blank" rel="noopener" aria-label="En savoir plus sur les activités, sur le site de l'office de tourisme">En savoir plus</a></div>
   </div>
@@ -201,24 +201,25 @@
 <section class="section" id="avis">
   <div class="wrap">
     <div class="avis__tete apparait">
-      <a class="avis__lien" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener" aria-label="Voir les 8 avis sur Google">
-        <div class="avis__note">4,9</div>
+      <a class="avis__lien" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir les 28 avis sur Airbnb">
+        <div class="avis__note">5,0</div>
         <div>
           <div class="etoiles" style="font-size:22px" aria-hidden="true">★★★★★</div>
-          <div>8 avis Google</div>
+          <div>28 avis Airbnb</div>
         </div>
       </a>
       <div class="avis__plateformes">
-        <a class="puce puce--lien" href="https://www.booking.com/hotel/fr/brin-d-ardeche-saint-prix.fr.html" target="_blank" rel="noopener">Booking 9,0 sur 10 (1 avis)</a>
-        <a class="puce puce--lien" href="https://www.abritel.fr/location-vacances/p2579397" target="_blank" rel="noopener">Abritel 10 sur 10 (1 avis)</a>
+        <a class="puce puce--lien" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener">Google 4,9 sur 5 (8 avis)</a>
+        <a class="puce puce--lien" href="https://www.booking.com/hotel/fr/brin-d-ardeche-saint-prix.fr.html" target="_blank" rel="noopener">Booking 9,0 sur 10 (1 avis)</a>
+        <a class="puce puce--lien" href="https://www.abritel.fr/location-vacances/p2579397" target="_blank" rel="noopener">Abritel 10 sur 10 (1 avis)</a>
       </div>
     </div>
     <div class="avis__grille">
-      <a class="avis-carte apparait" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener" aria-label="Voir cet avis sur la fiche Google"><p>« Bien équipée, confortable et très cosy avec le poêle à bois et l'extraordinaire sauna d'extérieur (au bois). Hôte très sympathique et réactive, nous recommandons vivement cet hébergement ! »</p><footer>Juliette Egasse<span>Avis Google, séjour de novembre 2025</span></footer></a>
-      <a class="avis-carte apparait" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener" aria-label="Voir cet avis sur la fiche Google"><p>« La grande terrasse extérieure […] permet de passer du temps dehors à tout moment de la journée. Nous avons fait l'expérience de passer une nuit dans la cabane. »</p><footer>Anne et JC Simon<span>Avis Google, séjour de septembre 2025</span></footer></a>
-      <a class="avis-carte apparait" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener" aria-label="Voir cet avis sur la fiche Google"><p>« Dans un cadre paisible et verdoyant, vous trouverez tous les équipements nécessaires pour se ressourcer et profiter de la région. Lydie est très réactive et disponible. »</p><footer>Anthony Guitton<span>Avis Google, séjour d'août 2025</span></footer></a>
+      <a class="avis-carte apparait" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Un logement situé dans un superbe endroit, très paisible. Le terrain est grand, parfait pour laisser les enfants (et le chien) explorer. […] Le four à pizza, la table de ping-pong et les fléchettes sont des plus qu'on a adoré. »</p><footer>Mary<span>Avis Airbnb, juillet 2026</span></footer></a>
+      <a class="avis-carte apparait" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Très jolie maison dans un très bel environnement, un vrai havre de paix. Lydie est très sympathique et réactive. Merci beaucoup. »</p><footer>Estelle<span>Avis Airbnb, juillet 2026</span></footer></a>
+      <a class="avis-carte apparait" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Lydie est réactive et arrangeante. Il n'y a pas de vis-à-vis et le logement est très calme. […] Four à pizza parfaitement fonctionnel. »</p><footer>Charles<span>Avis Airbnb, septembre 2026</span></footer></a>
     </div>
-    <div class="centre apparait" style="margin-top:34px"><button class="btn" data-reserver>Réserver mon séjour</button></div>
+    <div class="centre apparait" style="margin-top:34px"><a class="btn" href="#contact">Réserver mon séjour</a></div>
   </div>
 </section>
 
@@ -236,11 +237,11 @@
         <a class="info" href="mailto:lydmonnet05@gmail.com" aria-label="Écrire à lydmonnet05@gmail.com" title="Écrire à lydmonnet05@gmail.com"><span class="info__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><b>Courriel</b></a>
         <a class="info" href="https://www.google.com/maps/dir/?api=1&amp;destination=655+Chemin+de+la+Chabanne+07270+Saint-Prix" target="_blank" rel="noopener" aria-label="Itinéraire jusqu'à Brin d'Ardèche" title="Itinéraire jusqu'à Brin d'Ardèche"><span class="info__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.200 7-12a7 7 0 0 0-14 0c0 5.800 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg></span><b>Itinéraire</b></a>
       </div>
-        <div class="avis-defile" aria-label="Avis des voyageurs"><a class="avis-defile__tete" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener" aria-label="4,9 sur 5, 8 avis Google"><b>4,9</b><span class="avis-defile__etoiles" aria-hidden="true">★★★★★</span><span>8 avis Google</span></a><div class="avis-defile__piste"><a class="avis-defile__carte" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener" aria-label="Voir cet avis sur la fiche Google"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Bien équipée, confortable et très cosy avec le poêle à bois et l'extraordinaire sauna d'extérieur (au bois). Hôte très sympathique et réactive, nous recommandons vivement cet hébergement ! »</p><footer>Juliette Egasse<span>Avis Google, séjour de novembre 2025</span></footer></a><a class="avis-defile__carte" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener" aria-label="Voir cet avis sur la fiche Google"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« La grande terrasse extérieure […] permet de passer du temps dehors à tout moment de la journée. Nous avons fait l'expérience de passer une nuit dans la cabane. »</p><footer>Anne et JC Simon<span>Avis Google, séjour de septembre 2025</span></footer></a><a class="avis-defile__carte" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener" aria-label="Voir cet avis sur la fiche Google"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Dans un cadre paisible et verdoyant, vous trouverez tous les équipements nécessaires pour se ressourcer et profiter de la région. Lydie est très réactive et disponible. »</p><footer>Anthony Guitton<span>Avis Google, séjour d'août 2025</span></footer></a><a tabindex="-1" aria-hidden="true" class="avis-defile__carte" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener" aria-label="Voir cet avis sur la fiche Google"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Bien équipée, confortable et très cosy avec le poêle à bois et l'extraordinaire sauna d'extérieur (au bois). Hôte très sympathique et réactive, nous recommandons vivement cet hébergement ! »</p><footer>Juliette Egasse<span>Avis Google, séjour de novembre 2025</span></footer></a><a tabindex="-1" aria-hidden="true" class="avis-defile__carte" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener" aria-label="Voir cet avis sur la fiche Google"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« La grande terrasse extérieure […] permet de passer du temps dehors à tout moment de la journée. Nous avons fait l'expérience de passer une nuit dans la cabane. »</p><footer>Anne et JC Simon<span>Avis Google, séjour de septembre 2025</span></footer></a><a tabindex="-1" aria-hidden="true" class="avis-defile__carte" href="https://www.google.com/maps?cid=9082785545654078505" target="_blank" rel="noopener" aria-label="Voir cet avis sur la fiche Google"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Dans un cadre paisible et verdoyant, vous trouverez tous les équipements nécessaires pour se ressourcer et profiter de la région. Lydie est très réactive et disponible. »</p><footer>Anthony Guitton<span>Avis Google, séjour d'août 2025</span></footer></a></div></div>
+        <div class="avis-defile" aria-label="Avis des voyageurs"><a class="avis-defile__tete" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="5,0 sur 5, 28 avis Airbnb"><b>5,0</b><span class="avis-defile__etoiles" aria-hidden="true">★★★★★</span><span>28 avis Airbnb</span></a><div class="avis-defile__piste"><a class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Un logement situé dans un superbe endroit, très paisible. Le terrain est grand, parfait pour laisser les enfants (et le chien) explorer. […] Le four à pizza, la table de ping-pong et les fléchettes sont des plus qu'on a adoré. »</p><footer>Mary<span>Avis Airbnb, juillet 2026</span></footer></a><a class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Très bon séjour chez Lydie, qui a été réactive et très arrangeante pour les horaires. Une maison au calme en pleine nature, avec four à pizzas et sauna, génial ! »</p><footer>Benjamin<span>Avis Airbnb, octobre 2026</span></footer></a><a class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Très jolie maison dans un très bel environnement, un vrai havre de paix. Lydie est très sympathique et réactive. Merci beaucoup. »</p><footer>Estelle<span>Avis Airbnb, juillet 2026</span></footer></a><a class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Une très belle maison dans un cadre idyllique ! Lydie a été une hôte incroyable, très réactive pour nous aider. »</p><footer>Georgina<span>Avis Airbnb, décembre 2025</span></footer></a><a class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Très bel endroit paisible avec une nature incroyable. Lydie est une hôte adorable et arrangeante. La maison est très bien. Nous avons passé un très bon séjour. »</p><footer>Florence<span>Avis Airbnb, mai 2026</span></footer></a><a class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Lydie est réactive et arrangeante. Il n'y a pas de vis-à-vis et le logement est très calme. […] Four à pizza parfaitement fonctionnel. »</p><footer>Charles<span>Avis Airbnb, septembre 2026</span></footer></a><a class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Maison fidèle à la description. Tout y est pour passer un agréable séjour. »</p><footer>Louis<span>Avis Airbnb, juillet 2026</span></footer></a><a class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Super séjour dans ce petit coin de paradis très bien équipé, il ne manque rien. Lydie est une hôte très arrangeante. »</p><footer>Régine<span>Avis Airbnb, mai 2026</span></footer></a><a tabindex="-1" aria-hidden="true" class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Un logement situé dans un superbe endroit, très paisible. Le terrain est grand, parfait pour laisser les enfants (et le chien) explorer. […] Le four à pizza, la table de ping-pong et les fléchettes sont des plus qu'on a adoré. »</p><footer>Mary<span>Avis Airbnb, juillet 2026</span></footer></a><a tabindex="-1" aria-hidden="true" class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Très bon séjour chez Lydie, qui a été réactive et très arrangeante pour les horaires. Une maison au calme en pleine nature, avec four à pizzas et sauna, génial ! »</p><footer>Benjamin<span>Avis Airbnb, octobre 2026</span></footer></a><a tabindex="-1" aria-hidden="true" class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Très jolie maison dans un très bel environnement, un vrai havre de paix. Lydie est très sympathique et réactive. Merci beaucoup. »</p><footer>Estelle<span>Avis Airbnb, juillet 2026</span></footer></a><a tabindex="-1" aria-hidden="true" class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Une très belle maison dans un cadre idyllique ! Lydie a été une hôte incroyable, très réactive pour nous aider. »</p><footer>Georgina<span>Avis Airbnb, décembre 2025</span></footer></a><a tabindex="-1" aria-hidden="true" class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Très bel endroit paisible avec une nature incroyable. Lydie est une hôte adorable et arrangeante. La maison est très bien. Nous avons passé un très bon séjour. »</p><footer>Florence<span>Avis Airbnb, mai 2026</span></footer></a><a tabindex="-1" aria-hidden="true" class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Lydie est réactive et arrangeante. Il n'y a pas de vis-à-vis et le logement est très calme. […] Four à pizza parfaitement fonctionnel. »</p><footer>Charles<span>Avis Airbnb, septembre 2026</span></footer></a><a tabindex="-1" aria-hidden="true" class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Maison fidèle à la description. Tout y est pour passer un agréable séjour. »</p><footer>Louis<span>Avis Airbnb, juillet 2026</span></footer></a><a tabindex="-1" aria-hidden="true" class="avis-defile__carte" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="avis-defile__etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Super séjour dans ce petit coin de paradis très bien équipé, il ne manque rien. Lydie est une hôte très arrangeante. »</p><footer>Régine<span>Avis Airbnb, mai 2026</span></footer></a></div></div>
       </div>
       <form class="demande apparait" id="question" novalidate>
         <h3>Posez votre question</h3>
-        <p class="demande__note">Ce formulaire sert uniquement aux questions. Pour réserver, utilisez le bouton « Réserver ».</p>
+        <p class="demande__note">Écrivez à Lydie : votre message est envoyé depuis votre messagerie.</p>
         <div class="champs">
           <label class="champ">Nom<input name="nom" required autocomplete="name"></label>
           <label class="champ">Courriel<input name="mail" type="email" required autocomplete="email"></label>
@@ -257,11 +258,10 @@
   <div class="wrap pied__in">
     <div><b>Brin d'Ardèche</b>655 chemin de la Chabanne, 07270 Saint-Prix (Ardèche)</div>
     <div>Téléphone : <a href="tel:+33667814684">06 67 81 46 84</a><br>Courriel : <a href="mailto:lydmonnet05@gmail.com">lydmonnet05@gmail.com</a></div>
-    <div class="pied__credits">Photos des activités : Robert Ferréol (CC BY-SA 4.0), trams aux fils (CC BY 2.0), Celeda (CC BY-SA 4.0), via Wikimedia Commons.</div>
   </div>
 </footer>
 
-<button class="flottant" data-reserver>Réserver</button>
+<a class="flottant" href="#contact">Réserver</a>
 
 <div class="vis" id="vis" role="dialog" aria-modal="true" aria-labelledby="vis-titre" hidden>
   <div class="vis__boite">
@@ -278,52 +278,9 @@
   </div>
 </div>
 
-<div class="voile" id="voile" hidden></div>
-<aside class="tiroir" id="tiroir" role="dialog" aria-modal="true" aria-labelledby="t-titre" aria-hidden="true">
-  <div class="tiroir__tete"><h2 id="t-titre">Votre séjour</h2><button class="tiroir__x" aria-label="Fermer">×</button></div>
-  <ol class="etapes" id="etapes"><li class="est-actif">Dates</li><li>Coordonnées</li><li>Confirmation</li></ol>
 
-  <div class="tiroir__corps" id="e1">
-    <div class="cal">
-      <div class="cal__nav"><button id="cal-p" aria-label="Mois précédent">‹</button><b id="cal-mois"></b><button id="cal-s" aria-label="Mois suivant">›</button></div>
-      <div class="cal__jours"><span>lu</span><span>ma</span><span>me</span><span>je</span><span>ve</span><span>sa</span><span>di</span></div>
-      <div class="cal__grille" id="cal-grille"></div>
-      <p class="cal__aide" id="cal-aide">Choisissez votre jour d'arrivée, puis votre jour de départ.</p>
-    </div>
-    <label class="champ">Nombre de personnes
-      <select id="nb"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select>
-    </label>
-    <div class="recap" id="recap1"></div>
-  </div>
 
-  <form class="tiroir__corps" id="e2" hidden novalidate>
-    <div class="recap recap--mini" id="recap2"></div>
-    <div class="champs">
-      <label class="champ">Prénom<input name="prenom" required autocomplete="given-name"></label>
-      <label class="champ">Nom<input name="nom" required autocomplete="family-name"></label>
-      <label class="champ champ--pleine">Courriel<input name="mail" type="email" required autocomplete="email"></label>
-      <label class="champ champ--pleine">Téléphone<input name="tel" type="tel" required autocomplete="tel"></label>
-      <label class="champ champ--pleine">Un message pour Lydie (facultatif)<textarea name="message" rows="3"></textarea></label>
-    </div>
-    <p class="demande__note">Lydie vérifie les disponibilités et confirme ensuite votre séjour avec vous.</p>
-  </form>
-
-  <div class="tiroir__corps merci" id="e3" hidden>
-    <div class="merci__ico"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="20"/><path d="m15 25 6 6 12-14"/></svg></div>
-    <h3 id="merci-titre">Merci !</h3>
-    <p id="merci-txt"></p>
-    <div class="recap" id="recap3"></div>
-    <button class="btn btn--bloc" id="merci-fermer" type="button">Fermer</button>
-  </div>
-
-  <div class="tiroir__pied" id="pied">
-    <div class="tiroir__total"><span>Total estimé</span><b id="total">-</b></div>
-    <button class="btn btn--bloc" id="suite" type="button" disabled>Continuer</button>
-    <button class="lien" id="retour" type="button" hidden>‹ Modifier mes dates</button>
-  </div>
-</aside>
-
-<script src="js/i18n.js?v=20261024a"></script>
-<script src="js/main.js?v=20261024a"></script>
+<script src="js/i18n.js?v=20261024b"></script>
+<script src="js/main.js?v=20261024b"></script>
 </body>
 </html>

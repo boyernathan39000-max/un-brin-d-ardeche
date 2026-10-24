@@ -238,11 +238,31 @@
 "Tarif estimé d'après les prix affichés. Draps et serviettes en supplément. Lydie confirme le montant définitif.":"Estimated price based on the rates shown. Sheets and towels cost extra. Lydie confirms the final amount.",
 "Votre demande de réservation est bien enregistrée. Lydie vous recontactera pour confirmer les disponibilités et finaliser votre séjour.":"Your booking request has been recorded. Lydie will contact you to confirm availability and finalise your stay.",
 "Question avant réservation":"Question before booking",
+"Voir les 28 avis sur Airbnb":"See the 28 reviews on Airbnb",
+"Voir cet avis sur Airbnb":"See this review on Airbnb",
+"5,0 sur 5 · 28 avis Airbnb":"5.0 out of 5 · 28 Airbnb reviews",
+"5,0 sur 5, 28 avis Airbnb":"5.0 out of 5, 28 Airbnb reviews",
+"28 avis Airbnb":"28 Airbnb reviews",
+"Google 4,9 sur 5 (8 avis)":"Google 4.9 out of 5 (8 reviews)",
+"Écrivez à Lydie : votre message est envoyé depuis votre messagerie.":"Write to Lydie: your message is sent from your email app.",
+"Photo :":"Photo:",
+"Photo fournie par Lydie":"Photo provided by Lydie",
+"Lydie, votre hôte":"Lydie, your host",
+"Intérieur de la cabane tonneau, lit double et fenêtre sur la nature":"Inside the barrel cabin, double bed and window onto nature",
+"« Un logement situé dans un superbe endroit, très paisible. Le terrain est grand, parfait pour laisser les enfants (et le chien) explorer. […] Le four à pizza, la table de ping-pong et les fléchettes sont des plus qu'on a adoré. »":"“A home in a superb, very peaceful spot. The grounds are large, perfect for letting the children (and the dog) explore. […] The pizza oven, the ping-pong table and the darts were extras we loved.”",
+"« Très bon séjour chez Lydie, qui a été réactive et très arrangeante pour les horaires. Une maison au calme en pleine nature, avec four à pizzas et sauna, génial ! »":"“Very good stay at Lydie's, who was responsive and very accommodating with the times. A quiet house in the middle of nature, with a pizza oven and sauna, fantastic!”",
+"« Très jolie maison dans un très bel environnement, un vrai havre de paix. Lydie est très sympathique et réactive. Merci beaucoup. »":"“Very pretty house in a very beautiful setting, a real haven of peace. Lydie is very friendly and responsive. Thank you so much.”",
+"« Une très belle maison dans un cadre idyllique ! Lydie a été une hôte incroyable, très réactive pour nous aider. »":"“A very beautiful house in an idyllic setting! Lydie was an incredible host, very quick to help us.”",
+"« Très bel endroit paisible avec une nature incroyable. Lydie est une hôte adorable et arrangeante. La maison est très bien. Nous avons passé un très bon séjour. »":"“A very beautiful, peaceful place with incredible nature. Lydie is a lovely, accommodating host. The house is very good. We had a very good stay.”",
+"« Lydie est réactive et arrangeante. Il n'y a pas de vis-à-vis et le logement est très calme. […] Four à pizza parfaitement fonctionnel. »":"“Lydie is responsive and accommodating. There are no overlooking neighbours and the home is very quiet. […] Pizza oven in perfect working order.”",
+"« Maison fidèle à la description. Tout y est pour passer un agréable séjour. »":"“House true to the description. Everything is there for a pleasant stay.”",
+"« Super séjour dans ce petit coin de paradis très bien équipé, il ne manque rien. Lydie est une hôte très arrangeante. »":"“Great stay in this little corner of paradise, very well equipped, nothing is missing. Lydie is a very accommodating host.”",
 "Arrivée":"Arrival","Départ":"Departure","Aller à ":"Go to "
   };
   var K={};Object.keys(D).forEach(function(k){K[k.replace(/\s+/g,' ')]=D[k]});
   var MOIS_EN=['January','February','March','April','May','June','July','August','September','October','November','December'];
   var JOURS_EN=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var MFR={janvier:'January',février:'February',mars:'March',avril:'April',mai:'May',juin:'June',juillet:'July',août:'August',septembre:'September',octobre:'October',novembre:'November',décembre:'December'};
   var racine=document.documentElement,lang='fr';
   var ATTRS=['alt','aria-label','title'];
   var orig=new WeakMap();   /* noeud -> texte français d'origine */
@@ -252,6 +272,7 @@
     var m;
     if((m=/^(\d+) photos?$/.exec(t)))return m[1]+(+m[1]>1?' photos':' photo');
     if((m=/^Voir les photos : (.+)$/.exec(t)))return 'See the photos: '+(K[m[1]]||m[1]);
+    if((m=/^Avis Airbnb, (janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre) (\d{4})$/.exec(t)))return 'Airbnb review, '+MFR[m[1]]+' '+m[2];
     if((m=/^Aller à (.+)$/.exec(t)))return 'Go to '+(K[m[1]]||m[1]);
     return null;
   }
