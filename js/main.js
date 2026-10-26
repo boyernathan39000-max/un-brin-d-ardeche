@@ -81,7 +81,7 @@
     ch2:{t:'Chambre 2',p:[['chb2-1','Chambre 2, deux lits simples'],['chb2-2','Chambre 2, vue d\'ensemble'],['chb2-3','Chambre 2, table de chevet et lampe'],['chb2-5','Chambre 2, rideaux et fenêtres']]},
     ch3:{t:'Chambre 3',p:[['chb3-1','Chambre 3, lit double et tête de lit en planches éclairée'],['chb3-2','Chambre 3, vue depuis la porte']]},
     ch4:{t:'Chambre 4',p:[['chb4-1','Chambre 4, lit double et étagère en bois'],['chb4-2','Chambre 4, tête de lit en bois clair'],['chb4-3','Chambre 4, porte et portemanteau'],['chb4-4','Chambre 4, vue d\'ensemble']]},
-    cabane:{t:'La cabane tonneau',p:[['cab-1','Intérieur de la cabane tonneau, lit double et fenêtre sur la nature'],['cab-3','La cabane tonneau et sa porte']]},
+    cabane:{t:'La cabane tonneau',p:[['cab-1','Intérieur de la cabane tonneau, lit double et fenêtre sur la nature'],['cab-3','La cabane tonneau et sa porte'],['cabane-lampions','Intérieur de la cabane tonneau, lit et lampions colorés']]},
     sauna:{t:'Le sauna',p:[['sauna-interieur','Intérieur du sauna, poêle à bois et baie vitrée sur la forêt'],['sauna-ext','Le sauna en forme de tonneau']]},
     sejour:{t:'Le séjour',p:[['sejour','Séjour avec grande table à manger'],['sejour-large','Le séjour vu depuis l\'entrée'],['sejour-3','Le séjour et son coin salon'],['poele','Le poêle à bois du séjour']]},
     salon:{t:'Le salon',p:[['salon','Salon avec canapé et mur en bois'],['salon-2','Le salon et son éclairage'],['salon-3','Le salon et l\'escalier']]},

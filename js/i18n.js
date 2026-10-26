@@ -82,6 +82,7 @@
 "Un cadre sauvage pour le vélorail. La région propose aussi de la baignade et des sports d'eau vive.":"A wild setting for rail biking. The area also offers swimming and white-water sports.",
 "Pays de Lamastre":"Lamastre area",
 "Randonnées et nature":"Hiking and nature",
+"Intérieur de la cabane tonneau, lit et lampions colorés":"Inside the barrel cabin, bed and colourful lanterns",
 "Le sauna":"The sauna",
 "La cabane":"The cabin",
 "Lit double et fenêtre sur la nature":"Double bed and window onto nature",
