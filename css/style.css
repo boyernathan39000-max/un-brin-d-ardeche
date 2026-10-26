@@ -404,12 +404,13 @@ a.avis-carte:hover{transform:scale(1.04)}
 .chcar__points button{width:11px;height:11px;border-radius:50%;border:2px solid #fff;background:transparent;padding:0;cursor:pointer}
 .chcar__points button.est-actif{background:#fff}
 .equip-boite{width:min(980px,100%)}
-.equip-corps{padding:6px 24px 26px;overflow-y:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:22px 34px}
+.equip-corps{padding:6px 24px 26px;overflow-y:auto;display:grid;grid-template-columns:repeat(2,1fr);gap:22px 34px;align-items:start}
+.equip-col{display:flex;flex-direction:column;gap:22px}
 .equip-cat h4{font-family:var(--ft);font-size:19px;color:var(--volet);margin-bottom:8px}
 .equip-cat ul{list-style:none;display:grid;gap:6px}
 .equip-cat li{position:relative;padding-left:20px;font-size:16px}
 .equip-cat li:before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--volet)}
-@media(max-width:900px){.chambres-bloc{grid-template-columns:1fr}.chcar__slide{min-height:300px}.equip-corps{grid-template-columns:1fr}.chcar__fl{width:42px;height:42px}.section:after{width:36px;height:36px;right:16px;bottom:14px}}
+@media(max-width:900px){.chambres-bloc{grid-template-columns:1fr}.chcar__slide{min-height:300px}.equip-corps{grid-template-columns:1fr}.equip-col{display:contents}.equip-corps{display:flex;flex-direction:column}.chcar__fl{width:42px;height:42px}.section:after{width:36px;height:36px;right:16px;bottom:14px}}
 
 
 .entete__cta{display:flex;align-items:center;gap:12px;justify-content:flex-end}
