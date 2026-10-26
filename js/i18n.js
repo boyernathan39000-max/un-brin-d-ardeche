@@ -40,7 +40,7 @@
 "Lits doubles":"Double beds",
 "Lits simples":"Single beds",
 "Couchages dans la cabane tonneau":"Beds in the barrel cabin",
-"Lit bébé (0 à 3 ans)":"Baby cot (0 to 3 years)",
+"Lit bébé (0 à 3 ans)":"Baby cot (0 to 3 years old)",
 "gratuit":"free",
 "Vérifier les disponibilités":"Check availability",
 "Chambre 1":"Bedroom 1","Chambre 2":"Bedroom 2","Chambre 3":"Bedroom 3","Chambre 4":"Bedroom 4",
@@ -61,11 +61,11 @@
 "Des moments à vivre dehors":"Moments to enjoy outdoors",
 "Un sauna au bois, une nuit en cabane tonneau et des soirées autour du four à pizza.":"A wood-fired sauna, a night in a barrel cabin and evenings around the pizza oven.",
 "Le sauna au bois":"The wood-fired sauna",
-"Détendez-vous dans un sauna en forme de tonneau chauffé au bois. Une douche extérieure attend les plus courageux.":"Relax in a barrel-shaped sauna heated with wood. An outdoor shower awaits the bravest.",
+"Détendez-vous dans un sauna en forme de tonneau chauffé au bois. Une douche extérieure attend les plus courageux.":"Relax in a wood-heated, barrel-shaped sauna. An outdoor shower awaits the bravest.",
 "La cabane tonneau":"The barrel cabin",
 "Dormez dans une cabane en forme de tonneau : 2 couchages pour une nuit insolite à l'extérieur.":"Sleep in a barrel-shaped cabin: 2 beds for an unusual night outdoors.",
 "Le four à pizza":"The pizza oven",
-"Préparez vos pizzas dans le four à bois installé sous l'appentis, pour des soirées conviviales.":"Bake your pizzas in the wood-fired oven under the lean-to, for friendly evenings.",
+"Préparez vos pizzas dans le four à bois installé sous l'appentis, pour des soirées conviviales.":"Bake your pizzas in the wood-fired oven under the lean-to, for relaxed evenings with friends and family.",
 "La terrasse":"The terrace",
 "Profitez de la terrasse plein sud et en partie couverte : patio, plancha, barbecue, grande table et table de ping-pong.":"Enjoy the south-facing, partly covered terrace: patio, plancha, barbecue, large table and ping-pong table.",
 "Découvrez la maison en images":"Discover the house in pictures",
@@ -122,14 +122,14 @@
 "5 étoiles sur 5":"5 stars out of 5",
 "Une question avant de réserver ?":"A question before booking?",
 "Appeler au 06 67 81 46 84":"Call 06 67 81 46 84",
-"Écrire à lydmonnet05@gmail.com":"Write to lydmonnet05@gmail.com",
+"Écrire à lydmonnet05@gmail.com":"Email lydmonnet05@gmail.com",
 "Itinéraire jusqu'à Brin d'Ardèche":"Directions to Brin d'Ardèche",
 "Téléphone":"Phone",
 "Courriel":"Email",
 "Itinéraire":"Directions",
 "Posez votre question":"Ask your question",
 "Ce formulaire sert uniquement aux questions. Pour réserver, utilisez le bouton « Réserver ».":"This form is only for questions. To book, use the “Book” button.",
-"Nom":"Last name",
+"Nom":"Name",
 "Votre question":"Your question",
 "Envoyer ma question":"Send my question",
 "Votre messagerie s'ouvre avec votre question prête à envoyer.":"Your email app opens with your question ready to send.",
@@ -220,7 +220,7 @@
 "Chambre 2, les deux lits":"Bedroom 2, the two beds",
 "Chambre 2, rideaux et fenêtres":"Bedroom 2, curtains and windows",
 "Chambre 2, placard et fenêtres":"Bedroom 2, wardrobe and windows",
-"Chambre 3, lit double et tête de lit en planches éclairée":"Bedroom 3, double bed and lit plank headboard",
+"Chambre 3, lit double et tête de lit en planches éclairée":"Bedroom 3, double bed and plank headboard with lighting",
 "Chambre 3, vue depuis la porte":"Bedroom 3, view from the door",
 "Chambre 3, couette turquoise":"Bedroom 3, turquoise duvet",
 "Chambre 4, lit double et tête de lit en bois clair":"Bedroom 4, double bed and light wood headboard",
@@ -272,7 +272,7 @@
 "Lydie, votre hôte":"Lydie, your host",
 "Intérieur de la cabane tonneau, lit double et fenêtre sur la nature":"Inside the barrel cabin, double bed and window onto nature",
 "« Un logement situé dans un superbe endroit, très paisible. Le terrain est grand, parfait pour laisser les enfants (et le chien) explorer. […] Le four à pizza, la table de ping-pong et les fléchettes sont des plus qu'on a adoré. »":"“A home in a superb, very peaceful spot. The grounds are large, perfect for letting the children (and the dog) explore. […] The pizza oven, the ping-pong table and the darts were extras we loved.”",
-"« Très bon séjour chez Lydie, qui a été réactive et très arrangeante pour les horaires. Une maison au calme en pleine nature, avec four à pizzas et sauna, génial ! »":"“Very good stay at Lydie's, who was responsive and very accommodating with the times. A quiet house in the middle of nature, with a pizza oven and sauna, fantastic!”",
+"« Très bon séjour chez Lydie, qui a été réactive et très arrangeante pour les horaires. Une maison au calme en pleine nature, avec four à pizzas et sauna, génial ! »":"“Very good stay at Lydie's, who was responsive and very accommodating about arrival times. A quiet house in the middle of nature, with a pizza oven and sauna, fantastic!”",
 "« Très jolie maison dans un très bel environnement, un vrai havre de paix. Lydie est très sympathique et réactive. Merci beaucoup. »":"“Very pretty house in a very beautiful setting, a real haven of peace. Lydie is very friendly and responsive. Thank you so much.”",
 "« Une très belle maison dans un cadre idyllique ! Lydie a été une hôte incroyable, très réactive pour nous aider. »":"“A very beautiful house in an idyllic setting! Lydie was an incredible host, very quick to help us.”",
 "« Très bel endroit paisible avec une nature incroyable. Lydie est une hôte adorable et arrangeante. La maison est très bien. Nous avons passé un très bon séjour. »":"“A very beautiful, peaceful place with incredible nature. Lydie is a lovely, accommodating host. The house is very good. We had a very good stay.”",
@@ -324,12 +324,12 @@
     attrs(racineEl);
     Array.prototype.forEach.call(racineEl.querySelectorAll('[alt],[aria-label],[title]'),attrs);
   }
-  var titreFr=document.title,descEl=document.querySelector('meta[name=description]'),descFr=descEl?descEl.getAttribute('content'):'';
+  var titreFr=document.title,descEl=document.querySelector('meta[name=description]'),descFr=descEl?descEl.getAttribute('content'):'';function nrm(s){return s.replace(/\s+/g,' ')}
   function appliquer(l){
     lang=l;racine.lang=l;
     parcourir(document.body);
-    document.title=l==='en'?(K[titreFr]||titreFr):titreFr;
-    if(descEl)descEl.setAttribute('content',l==='en'?(K[descFr]||descFr):descFr);
+    document.title=l==='en'?(K[nrm(titreFr)]||titreFr):titreFr;
+    if(descEl)descEl.setAttribute('content',l==='en'?(K[nrm(descFr)]||descFr):descFr);
     try{localStorage.setItem('langue',l)}catch(e){}
     majSelecteur();
     document.dispatchEvent(new CustomEvent('langue',{detail:l}));
