@@ -697,3 +697,19 @@ h1,h2{line-height:1.2}
 .pied__credit{flex-basis:100%;text-align:center;margin-top:2px;font-size:14px}
 .pied__credit a{color:#B9C8D8;text-decoration:underline;text-underline-offset:3px}
 .pied__credit a:hover{color:#fff}
+
+.faq{background:var(--nuit-2)}
+.faq__liste{display:grid;gap:14px;max-width:820px}
+.faq__q{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--rayon);padding:22px 26px}
+.faq__q h3{font-size:clamp(18px,2vw,21px);color:#fff;margin:0 0 8px}
+.faq__q p{margin:0;color:#B9C8D8;font-size:17px;line-height:1.6}
+.faq--replie>.faq__q:nth-child(n+4){display:none}
+.faq__plus{margin-top:30px;text-align:left}
+.faq__plus .btn{gap:10px}
+.faq__plus .btn svg{transition:transform .25s}
+.faq__plus .btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+@media(max-width:700px){
+  .faq__q{padding:18px 18px}
+  .faq__q p{font-size:16px}
+  .faq__plus{text-align:center}
+}
