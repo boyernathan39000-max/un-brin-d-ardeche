@@ -694,4 +694,6 @@ h1,h2{line-height:1.2}
   .defile{overflow-x:auto!important}
   .defile [data-clone]{display:none}
 }
-
+.pied__credit{flex-basis:100%;text-align:center;margin-top:2px;font-size:14px}
+.pied__credit a{color:#B9C8D8;text-decoration:underline;text-underline-offset:3px}
+.pied__credit a:hover{color:#fff}

@@ -249,6 +249,7 @@
 "Activité suivante":"Next activity",
 "Avis précédent":"Previous review",
 "Avis suivant":"Next review",
+"Site réalisé par OBT Agency":"Website by OBT Agency",
 "Le poêle à bois du séjour":"The living room wood stove",
 "Salon avec canapé et mur en bois":"Lounge with sofa and wooden wall",
 "Le salon et son éclairage":"The lounge and its lighting",
