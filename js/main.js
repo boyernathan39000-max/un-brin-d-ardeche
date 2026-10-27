@@ -241,7 +241,7 @@
   if(mob.addEventListener)mob.addEventListener('change',majDefile);
   document.addEventListener('langue',function(){if(mob.matches)CIBLES.forEach(function(s){var el=$(s);if(el)cloner(el)})});
 
-  /* carrousels à flèches : on avance d'une largeur, et on revient au début après la dernière */
+  /* carrousels à flèches : on avance d'une largeur puis on revient au début après la dernière */
   function carrousel(piste,g,d){
     if(!piste||!g||!d)return;
     g.addEventListener('click',function(){if(!mob.matches)return;var debut=piste.scrollLeft<=4;piste.scrollTo({left:debut?piste.scrollWidth:piste.scrollLeft-piste.clientWidth,behavior:'smooth'})});
