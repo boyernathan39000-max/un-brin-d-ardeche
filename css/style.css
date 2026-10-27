@@ -574,7 +574,8 @@ h1,h2{line-height:1.2}
 @media(max-width:700px){
     html{overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
   body{touch-action:pan-y}
-  .chcar__piste,.cases--4,.car-fen .activites,.car-fen .avis__grille,.vis__vignettes{touch-action:pan-x pan-y}
+  .chcar__piste,.cases--4,.car-fen .activites,.car-fen .avis__grille{overflow-x:hidden;touch-action:pan-y}
+  .vis__vignettes{touch-action:pan-x pan-y}
 
     .intro__fond img{object-position:50% 50%}
 
@@ -588,7 +589,9 @@ h1,h2{line-height:1.2}
     .hero__boutons{flex-wrap:nowrap;gap:8px}
   .hero__boutons .btn{flex:1 1 0;min-width:0;justify-content:center;text-align:center;padding:12px 8px;font-size:13.5px;line-height:1.2}
   .hero__sous{font-size:15px;margin-top:14px}
-  .hero__corps{padding-bottom:140px}
+  .hero__corps{padding-bottom:92px}
+  .avis-pastille{padding:5px 12px;gap:6px;font-size:12.5px;margin-bottom:14px}
+  .avis-pastille .etoiles{letter-spacing:1px}
   .section--haut{padding-top:130px}
 
     .points.defile{display:block;overflow:hidden;max-width:none;padding:26px 0;margin:-26px 0}
@@ -614,18 +617,19 @@ h1,h2{line-height:1.2}
   .chambres-bloc{display:flex;flex-direction:column;gap:20px}
   .chambres-bloc .chcar{order:-1}
 
-    .cases--4{display:flex;grid-template-columns:none;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 0 22px;margin:-6px 0 -22px}
+    .cases-fen{border-radius:var(--rayon);box-shadow:var(--ombre);background:#fff}
+  .cases--4{display:flex;grid-template-columns:none;gap:0;overflow-x:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:var(--rayon)}
   .cases--4::-webkit-scrollbar{display:none}
-  .cases--4 .case{flex:0 0 100%;scroll-snap-align:start;box-shadow:0 6px 18px rgba(23,47,71,.16)}
-  .cases--4 .case:hover,.cases--4 .case:focus-visible{transform:none;box-shadow:0 6px 18px rgba(23,47,71,.16)}
+  .cases--4 .case{flex:0 0 100%;scroll-snap-align:start;box-shadow:none;border-radius:0}
+  .cases--4 .case:hover,.cases--4 .case:focus-visible{transform:none;box-shadow:none}
   .cases-fl,.cases-fl[hidden]{display:grid!important;place-items:center;width:42px;height:42px;font-size:26px;line-height:1;top:50%}
   .cases-fl.fleche--g{left:8px}.cases-fl.fleche--d{right:8px}
 
     .panneaux{flex-direction:column;height:auto;gap:0}
-  .panneau{flex:none;height:156px;margin-top:-30px;transition:height .6s cubic-bezier(.2,.8,.2,1);box-shadow:0 -6px 16px rgba(0,0,0,.28)}
-  .panneau:nth-child(1){margin-top:0;z-index:1;box-shadow:none}
-  .panneau:nth-child(2){z-index:2}.panneau:nth-child(3){z-index:3}.panneau:nth-child(4){z-index:4}
-  .panneau.est-ouvert{flex:none;height:400px;z-index:6}
+  .panneau{flex:none;height:156px;margin-top:-30px;transition:height .6s cubic-bezier(.2,.8,.2,1);box-shadow:0 8px 16px rgba(0,0,0,.3)}
+  .panneau:nth-child(1){margin-top:0;z-index:4}
+  .panneau:nth-child(2){z-index:3}.panneau:nth-child(3){z-index:2}.panneau:nth-child(4){z-index:1}
+  .panneau.est-ouvert{flex:none;height:400px}
   .panneau__num{top:42px}
   .panneau:nth-child(1) .panneau__num{top:20px}
   .panneau__txt{bottom:40px;transition:bottom .6s cubic-bezier(.2,.8,.2,1)}
@@ -643,7 +647,7 @@ h1,h2{line-height:1.2}
   #galerie:after{left:auto;right:20px;bottom:18px;width:84px;height:84px}
 
     .car-fen{position:relative}
-  .car-fen .activites,.car-fen .avis__grille{display:flex;grid-template-columns:none;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:var(--rayon)}
+  .car-fen .activites,.car-fen .avis__grille{display:flex;grid-template-columns:none;gap:0;overflow-x:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:var(--rayon)}
   .car-fen .activites::-webkit-scrollbar,.car-fen .avis__grille::-webkit-scrollbar{display:none}
   .car-fen .activite,.car-fen .avis-carte{flex:0 0 100%;scroll-snap-align:start}
   .car-fen .activite{min-height:380px}
@@ -666,6 +670,21 @@ h1,h2{line-height:1.2}
   .contact__grille .demande{order:2}
   .contact__gauche .avis-defile{order:3;flex:none}
   form.demande .btn{justify-content:center}
+
+    .section:not(.section--haut){padding-top:64px}
+  .section__tete{margin-bottom:22px}
+  .section__tete p{margin-top:10px}
+  .surtitre{margin-bottom:8px}
+  .sous-titre{margin:34px 0 14px}
+  .centre{margin-top:24px!important}
+  .chambres-bloc{gap:14px}
+  .marches{margin-top:44px}
+  .marches__titre{margin-bottom:26px}
+  .avis__tete{margin-bottom:20px;gap:16px}
+  .contact__grille{gap:20px}
+
+    a.avis-carte,.avis-defile a{pointer-events:none;cursor:default}
+  a.avis-carte:hover,.avis-defile__carte:hover,.avis-defile__tete:hover{transform:none}
 
     .menu{inset:74px 12px auto 12px;padding:14px}
   .menu a{padding:19px 20px;font-size:21px}

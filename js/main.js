@@ -241,6 +241,21 @@
   if(mob.addEventListener)mob.addEventListener('change',majDefile);
   document.addEventListener('langue',function(){if(mob.matches)CIBLES.forEach(function(s){var el=$(s);if(el)cloner(el)})});
 
+  /* avis : sur mobile les cartes ne mènent nulle part (on retire les liens, on les remet sur ordinateur) */
+  function liensAvis(){
+    $$('.avis__grille a.avis-carte, .avis-defile a').forEach(function(a){
+      if(mob.matches){
+        if(a.hasAttribute('href')){
+          ['href','target','rel','aria-label'].forEach(function(n){if(a.hasAttribute(n)){a.setAttribute('data-'+n,a.getAttribute(n));a.removeAttribute(n)}});
+        }
+      }else if(a.hasAttribute('data-href')){
+        ['href','target','rel','aria-label'].forEach(function(n){if(a.hasAttribute('data-'+n)){a.setAttribute(n,a.getAttribute('data-'+n));a.removeAttribute('data-'+n)}});
+      }
+    });
+  }
+  liensAvis();
+  if(mob.addEventListener)mob.addEventListener('change',liensAvis);
+
   /* carrousels à flèches : on avance d'une largeur puis on revient au début après la dernière */
   function carrousel(piste,g,d){
     if(!piste||!g||!d)return;
