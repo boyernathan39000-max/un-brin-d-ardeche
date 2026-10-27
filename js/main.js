@@ -57,9 +57,10 @@
     var piste=$('#chcar-piste');if(!piste)return;
     var sl=$$('.chcar__slide',piste),pts=$('#chcar-points');
     sl.forEach(function(s,k){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label',L.T('Aller à '+s.querySelector('.chcar__nom').textContent));b.addEventListener('click',function(){aller(k)});pts.appendChild(b)});
-    function idx(){return Math.round(piste.scrollLeft/piste.clientWidth)}
-    function maj2(){var i=idx();$$('button',pts).forEach(function(b,k){b.classList.toggle('est-actif',k===i)})}
-    function aller(k){k=(k+sl.length)%sl.length;piste.scrollTo({left:k*piste.clientWidth,behavior:'smooth'})}
+    var mobCh=window.matchMedia('(max-width:700px)'),cur=0;
+    function idx(){return mobCh.matches?cur:Math.round(piste.scrollLeft/piste.clientWidth)}
+    function maj2(){var i=Math.round(piste.scrollLeft/piste.clientWidth);if(!mobCh.matches)cur=i;$$('button',pts).forEach(function(b,k){b.classList.toggle('est-actif',k===(mobCh.matches?cur:i))})}
+    function aller(k){k=(k+sl.length)%sl.length;cur=k;if(mobCh.matches){piste.scrollLeft=k*piste.clientWidth;maj2()}else piste.scrollTo({left:k*piste.clientWidth,behavior:'smooth'})}
     $('#chcar-g').addEventListener('click',function(){aller(idx()-1)});
     $('#chcar-d').addEventListener('click',function(){aller(idx()+1)});
     piste.addEventListener('scroll',maj2,{passive:true});maj2();
@@ -256,11 +257,15 @@
   liensAvis();
   if(mob.addEventListener)mob.addEventListener('change',liensAvis);
 
-  /* carrousels à flèches : on avance d'une largeur puis on revient au début après la dernière */
+  /* carrousels à flèches : on retient le numéro de la case et on saute directement dessus, sans animation */
   function carrousel(piste,g,d){
     if(!piste||!g||!d)return;
-    g.addEventListener('click',function(){if(!mob.matches)return;var debut=piste.scrollLeft<=4;piste.scrollTo({left:debut?piste.scrollWidth:piste.scrollLeft-piste.clientWidth,behavior:'smooth'})});
-    d.addEventListener('click',function(){if(!mob.matches)return;var fin=piste.scrollLeft+piste.clientWidth>=piste.scrollWidth-4;piste.scrollTo({left:fin?0:piste.scrollLeft+piste.clientWidth,behavior:'smooth'})});
+    var i=0;
+    function n(){return piste.children.length}
+    function aller(k){i=(k+n())%n();piste.scrollLeft=i*piste.clientWidth}
+    g.addEventListener('click',function(){if(mob.matches)aller(i-1)});
+    d.addEventListener('click',function(){if(mob.matches)aller(i+1)});
+    window.addEventListener('resize',function(){if(mob.matches)piste.scrollLeft=i*piste.clientWidth});
   }
   carrousel($('#cases-communs'),$('#cases-g'),$('#cases-d'));
   carrousel($('#act-piste'),$('#act-car .car-fl--g'),$('#act-car .car-fl--d'));

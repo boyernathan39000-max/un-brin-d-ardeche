@@ -574,7 +574,7 @@ h1,h2{line-height:1.2}
 @media(max-width:700px){
     html{overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
   body{touch-action:pan-y}
-  .chcar__piste,.cases--4,.car-fen .activites,.car-fen .avis__grille{overflow-x:hidden;touch-action:pan-y}
+  .chcar__piste,.cases--4,.car-fen .activites,.car-fen .avis__grille{overflow:hidden;touch-action:pan-y;scroll-snap-type:none;scroll-behavior:auto}
   .vis__vignettes{touch-action:pan-x pan-y}
 
     .intro__fond img{object-position:50% 50%}
@@ -618,9 +618,9 @@ h1,h2{line-height:1.2}
   .chambres-bloc .chcar{order:-1}
 
     .cases-fen{border-radius:var(--rayon);box-shadow:var(--ombre);background:#fff}
-  .cases--4{display:flex;grid-template-columns:none;gap:0;overflow-x:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:var(--rayon)}
+  .cases--4{display:flex;grid-template-columns:none;gap:0;scrollbar-width:none;border-radius:var(--rayon)}
   .cases--4::-webkit-scrollbar{display:none}
-  .cases--4 .case{flex:0 0 100%;scroll-snap-align:start;box-shadow:none;border-radius:0}
+  .cases--4 .case{flex:0 0 100%;box-shadow:none;border-radius:0}
   .cases--4 .case:hover,.cases--4 .case:focus-visible{transform:none;box-shadow:none}
   .cases-fl,.cases-fl[hidden]{display:grid!important;place-items:center;width:42px;height:42px;font-size:26px;line-height:1;top:50%}
   .cases-fl.fleche--g{left:8px}.cases-fl.fleche--d{right:8px}
@@ -647,9 +647,9 @@ h1,h2{line-height:1.2}
   #galerie:after{left:auto;right:20px;bottom:18px;width:84px;height:84px}
 
     .car-fen{position:relative}
-  .car-fen .activites,.car-fen .avis__grille{display:flex;grid-template-columns:none;gap:0;overflow-x:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:var(--rayon)}
+  .car-fen .activites,.car-fen .avis__grille{display:flex;grid-template-columns:none;gap:0;scrollbar-width:none;border-radius:var(--rayon)}
   .car-fen .activites::-webkit-scrollbar,.car-fen .avis__grille::-webkit-scrollbar{display:none}
-  .car-fen .activite,.car-fen .avis-carte{flex:0 0 100%;scroll-snap-align:start}
+  .car-fen .activite,.car-fen .avis-carte{flex:0 0 100%}
   .car-fen .activite{min-height:380px}
   .car-fen .avis-carte{padding:24px 56px}
   .car-fl{display:grid;place-items:center;position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:42px;height:42px;border-radius:50%;border:0;background:#fff;color:var(--nuit);font-size:26px;line-height:1;cursor:pointer;box-shadow:var(--ombre)}
