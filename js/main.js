@@ -154,7 +154,7 @@
     ch.classList.toggle('marches__chemin--libre',!mob);
     if(mob){
       ch.style.height='';
-      items.forEach(function(li,i){li.style.cssText='';li.classList.remove('marches__li--g');xs[i]=14+(i%2?-6:6);ys[i]=li.offsetTop+16;pts[i].style.left=xs[i]+'px';pts[i].style.top=ys[i]+'px'});
+      items.forEach(function(li,i){li.style.cssText='';li.classList.remove('marches__li--g');xs[i]=i%2?30:14;ys[i]=li.offsetTop+16;pts[i].style.left=xs[i]+'px';pts[i].style.top=ys[i]+'px'});
     }else{
       var lw=Math.min(300,W*0.3),fin=0,prec=-110,bord={g:-24,d:-24};
       items.forEach(function(li,i){
@@ -201,4 +201,64 @@
   window.addEventListener('langue',function(){window.setTimeout(construire,60)});
   if(window.ResizeObserver)new ResizeObserver(construire).observe(ch);
   construire();
+})();
+
+/* Version mobile : défilements continus, carrousels, galerie repliable, zoom bloqué */
+(function(){
+  var mob=window.matchMedia('(max-width:700px)');
+  var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+
+  /* aucun zoom au pincement ni au double toucher */
+  ['gesturestart','gesturechange','gestureend'].forEach(function(n){document.addEventListener(n,function(e){e.preventDefault()},{passive:false})});
+  document.addEventListener('touchmove',function(e){if(e.touches&&e.touches.length>1)e.preventDefault()},{passive:false});
+
+  /* défilement continu de droite à gauche : on double le contenu pour que la boucle soit sans coupure */
+  var CIBLES=['.points','.puces','.avis__plateformes'];
+  function cloner(el){
+    var piste=$('.defile__piste',el);if(!piste)return;
+    $$('[data-clone]',piste).forEach(function(c){c.remove()});
+    $$(':scope > *',piste).forEach(function(c){
+      var k=c.cloneNode(true);k.setAttribute('aria-hidden','true');k.setAttribute('data-clone','');
+      $$('a,button',k).concat(k.matches('a,button')?[k]:[]).forEach(function(x){x.setAttribute('tabindex','-1')});
+      piste.appendChild(k);
+    });
+  }
+  function defiler(el){
+    if(el.classList.contains('defile'))return;
+    var piste=document.createElement('div');piste.className='defile__piste';
+    while(el.firstChild)piste.appendChild(el.firstChild);
+    el.appendChild(piste);el.classList.add('defile');cloner(el);
+  }
+  function figer(el){
+    if(!el.classList.contains('defile'))return;
+    var piste=$('.defile__piste',el);
+    $$('[data-clone]',piste).forEach(function(c){c.remove()});
+    while(piste.firstChild)el.insertBefore(piste.firstChild,piste);
+    piste.remove();el.classList.remove('defile');
+  }
+  function majDefile(){CIBLES.forEach(function(s){var el=$(s);if(!el)return;if(mob.matches)defiler(el);else figer(el)})}
+  majDefile();
+  if(mob.addEventListener)mob.addEventListener('change',majDefile);
+  document.addEventListener('langue',function(){if(mob.matches)CIBLES.forEach(function(s){var el=$(s);if(el)cloner(el)})});
+
+  /* carrousels à flèches : on avance d'une largeur, et on revient au début après la dernière */
+  function carrousel(piste,g,d){
+    if(!piste||!g||!d)return;
+    g.addEventListener('click',function(){if(!mob.matches)return;var debut=piste.scrollLeft<=4;piste.scrollTo({left:debut?piste.scrollWidth:piste.scrollLeft-piste.clientWidth,behavior:'smooth'})});
+    d.addEventListener('click',function(){if(!mob.matches)return;var fin=piste.scrollLeft+piste.clientWidth>=piste.scrollWidth-4;piste.scrollTo({left:fin?0:piste.scrollLeft+piste.clientWidth,behavior:'smooth'})});
+  }
+  carrousel($('#cases-communs'),$('#cases-g'),$('#cases-d'));
+  carrousel($('#act-piste'),$('#act-car .car-fl--g'),$('#act-car .car-fl--d'));
+  carrousel($('#avis-piste'),$('#avis-car .car-fl--g'),$('#avis-car .car-fl--d'));
+
+  /* galerie : quatre lignes, puis Voir plus / Voir moins */
+  var gal=$('#galerie-grille'),bp=$('#galerie-plus');
+  if(gal&&bp){
+    bp.addEventListener('click',function(){
+      var rep=gal.classList.toggle('galerie--replie');
+      bp.setAttribute('aria-expanded',rep?'false':'true');
+      $('.g-plus',bp).hidden=!rep;$('.g-moins',bp).hidden=rep;
+      if(rep){var y=gal.getBoundingClientRect().top+window.scrollY-90;window.scrollTo({top:y,behavior:'smooth'})}
+    });
+  }
 })();

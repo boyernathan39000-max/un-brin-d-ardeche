@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>Brin d'Ardèche : maison avec sauna et cabane tonneau à Saint-Prix</title>
 <meta name="description" content="Maison de campagne pour 8 personnes à Saint-Prix, dans les Monts d'Ardèche, avec sauna au bois, cabane tonneau, four à pizza et Dolce Via à moins de 1 km.">
 <link rel="preload" as="image" href="images/vue-loin.jpg" fetchpriority="high">
@@ -16,7 +16,7 @@
 .intro__fond{position:absolute;inset:0;background-size:cover}
 .avis-pastille,.avis-carte,.avis__lien,.puce--lien{text-decoration:none}
 </style>
-<link rel="stylesheet" href="css/style.css?v=20261027a">
+<link rel="stylesheet" href="css/style.css?v=20261027b">
 </head>
 <body>
 <script>if(!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('intro-actif')</script>
@@ -174,7 +174,7 @@
       <span class="surtitre">Galerie</span>
       <h2>Découvrez la maison en images</h2>
     </div>
-    <div class="galerie apparait" id="galerie-grille">
+    <div class="galerie apparait galerie--replie" id="galerie-grille">
       <button class="g-large" data-album="galerie" data-i="0"><img src="images/tonneaux-haut.jpg" alt="Vue du ciel sur la maison de pierre et sa terrasse" loading="lazy"></button>
       <button data-album="galerie" data-i="1"><img src="images/sejour-large.jpg" alt="Le séjour et la cuisine" loading="lazy"></button>
       <button data-album="galerie" data-i="2"><img src="images/cabane-int.jpg" alt="L'intérieur de la cabane tonneau" loading="lazy"></button>
@@ -189,6 +189,7 @@
       <button data-album="galerie" data-i="11"><img src="images/cabane-lampions.jpg" alt="Intérieur de la cabane tonneau, lit et lampions colorés" loading="lazy"></button>
       <button data-album="galerie" data-i="12"><img src="images/sdb.jpg" alt="Salle de bain avec fenêtre de toit" loading="lazy"></button>
     </div>
+    <div class="galerie__plus centre"><button class="btn" id="galerie-plus" type="button" aria-expanded="false"><span class="g-plus">Voir plus</span><span class="g-moins" hidden>Voir moins</span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
   </div>
 </section>
 
@@ -199,11 +200,14 @@
       <h2>À faire autour de Saint-Prix</h2>
       <p>Lamastre est à 8 km et Le Cheylard à 10 km. Voici quatre idées de sorties dans les environs.</p>
     </div>
-    <div class="activites">
+    <div class="car-fen" id="act-car">
+    <div class="activites" id="act-piste">
       <article class="activite apparait" style="background-image:url(images/act-dolce.jpg)"><span class="activite__dist">Moins de 1 km</span><div><h3>La Dolce Via</h3><small class="credit">Photo : <a href="https://commons.wikimedia.org/wiki/File:Pont_dolce_via.jpg" target="_blank" rel="noopener">Robert Ferréol, CC BY-SA 4.0</a></small><p>Roulez à vélo ou promenez-vous sur une voie douce aménagée et sécurisée. Le tronçon du Cheylard à Lamastre mesure près de 20 km.</p></div></article>
       <article class="activite apparait" style="background-image:url(images/act-mastrou.jpg)"><span class="activite__dist">Départ à Lamastre</span><div><h3>Le Mastrou, train à vapeur</h3><small class="credit">Photo : <a href="https://commons.wikimedia.org/wiki/File:Trains_du_Vivarais_dit_Le_Mastrou_03.jpg" target="_blank" rel="noopener">trams aux fils, CC BY 2.0</a></small><p>Voyagez en train à vapeur sur 28 km, de Lamastre à Tournon-sur-Rhône, par les gorges du Doux. Le trajet passe par des ponts, des viaducs et des tunnels.</p></div></article>
       <article class="activite apparait" style="background-image:url(images/act-gorges.jpg)"><span class="activite__dist">À 40 min en voiture</span><div><h3>Les gorges du Doux</h3><small class="credit">Photo : <a href="https://commons.wikimedia.org/wiki/File:Gorges_du_Doux,_Ardèche.jpg" target="_blank" rel="noopener">Celeda, CC BY-SA 4.0</a></small><p>Un cadre sauvage pour le vélorail. La région propose aussi de la baignade et des sports d'eau vive.</p></div></article>
       <article class="activite apparait" style="background-image:url(images/act-rando.jpg)"><span class="activite__dist">Pays de Lamastre</span><div><h3>Randonnées et nature</h3><small class="credit">Photo fournie par Lydie</small><p>Choisissez parmi 22 parcours de randonnée à pied et 3 circuits d'orientation gratuits à faire en famille.</p></div></article>
+    </div>
+    <button class="car-fl car-fl--g" type="button" aria-label="Activité précédente">‹</button><button class="car-fl car-fl--d" type="button" aria-label="Activité suivante">›</button>
     </div>
     <div class="centre apparait"><a class="btn" href="https://www.pays-lamastre-tourisme.com/fr/profiter/" target="_blank" rel="noopener" aria-label="En savoir plus sur les activités, sur le site de l'office de tourisme">En savoir plus</a></div>
     <div class="marches">
@@ -240,10 +244,13 @@
         <a class="puce puce--lien" href="https://www.abritel.fr/location-vacances/p2579397" target="_blank" rel="noopener">Abritel 10 sur 10 (1 avis)</a>
       </div>
     </div>
-    <div class="avis__grille">
+    <div class="car-fen" id="avis-car">
+    <div class="avis__grille" id="avis-piste">
       <a class="avis-carte apparait" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Un logement situé dans un superbe endroit, très paisible. Le terrain est grand, parfait pour laisser les enfants (et le chien) explorer. […] Le four à pizza, la table de ping-pong et les fléchettes sont des plus qu'on a adoré. »</p><footer>Mary<span>Avis Airbnb, juillet 2026</span></footer></a>
       <a class="avis-carte apparait" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Très jolie maison dans un très bel environnement, un vrai havre de paix. Lydie est très sympathique et réactive. Merci beaucoup. »</p><footer>Estelle<span>Avis Airbnb, juillet 2026</span></footer></a>
       <a class="avis-carte apparait" href="https://www.airbnb.fr/rooms/1399787797074014827" target="_blank" rel="noopener" aria-label="Voir cet avis sur Airbnb"><span class="etoiles" role="img" aria-label="5 étoiles sur 5">★★★★★</span><p>« Lydie est réactive et arrangeante. Il n'y a pas de vis-à-vis et le logement est très calme. […] Four à pizza parfaitement fonctionnel. »</p><footer>Charles<span>Avis Airbnb, septembre 2026</span></footer></a>
+    </div>
+    <button class="car-fl car-fl--g" type="button" aria-label="Avis précédent">‹</button><button class="car-fl car-fl--d" type="button" aria-label="Avis suivant">›</button>
     </div>
     <div class="centre apparait" style="margin-top:34px"><a class="btn" href="#contact">Réserver mon séjour</a></div>
   </div>
@@ -308,7 +315,7 @@
 
 
 
-<script src="js/i18n.js?v=20261027a"></script>
-<script src="js/main.js?v=20261027a"></script>
+<script src="js/i18n.js?v=20261027b"></script>
+<script src="js/main.js?v=20261027b"></script>
 </body>
 </html>

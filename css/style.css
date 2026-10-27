@@ -561,3 +561,118 @@ h1,h2{line-height:1.2}
 .page-legale th,.page-legale td{padding:9px 10px;border-bottom:1px solid rgba(23,47,71,.18);text-align:left;vertical-align:top}
 .page-legale th{font-weight:700;color:var(--nuit)}
 
+.car-fl{display:none}
+.galerie__plus{display:none}
+.defile__piste{display:flex;width:max-content}
+.defile__piste>*{flex:none}
+@keyframes defile{to{transform:translateX(-50%)}}
+@media(max-width:900px){
+  .burger span{transition:transform .25s ease,opacity .2s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(3.5px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){transform:translateY(-3.5px) rotate(-45deg)}
+}
+@media(max-width:700px){
+    html{overflow-x:hidden;overscroll-behavior-x:none;touch-action:pan-y}
+  body{touch-action:pan-y}
+  .chcar__piste,.cases--4,.car-fen .activites,.car-fen .avis__grille,.vis__vignettes{touch-action:pan-x pan-y}
+
+    .intro__fond img{object-position:50% 50%}
+
+    .entete__in{display:flex;justify-content:space-between;align-items:center;gap:0}
+  .entete__in nav{display:contents}
+  .entete__cta{gap:0}
+  .langue{margin-right:0}
+  .langue__code{display:none}
+  .langue__btn{padding:0 11px;gap:6px}
+
+    .hero__boutons{flex-wrap:nowrap;gap:8px}
+  .hero__boutons .btn{flex:1 1 0;min-width:0;justify-content:center;text-align:center;padding:12px 8px;font-size:13.5px;line-height:1.2}
+  .hero__sous{font-size:15px;margin-top:14px}
+  .hero__corps{padding-bottom:140px}
+  .section--haut{padding-top:130px}
+
+    .points.defile{display:block;overflow:hidden;max-width:none;padding:26px 0;margin:-26px 0}
+  .points.defile .defile__piste{animation:defile 26s linear infinite}
+  .points.defile .point{margin-right:10px;padding:12px 18px;box-shadow:0 8px 20px rgba(23,47,71,.22)}
+  .points.defile .point div{white-space:nowrap}
+
+    .maison{display:flex;flex-direction:column;gap:0;align-items:stretch}
+  .maison>.apparait:not(.collage){display:contents}
+  .maison>.apparait:not(.collage)>*{order:4}
+  .maison>.apparait:not(.collage)>.surtitre{order:1;align-self:flex-start}
+  .maison>.apparait:not(.collage)>h2{order:2}
+  .maison>.collage{order:3;width:100%;max-width:none;margin:6px 0 26px}
+  .maison>.apparait:not(.collage)>.btn{align-self:flex-start}
+  .maison__bas{width:100%}
+  .puces.defile{display:block;overflow:hidden;margin:14px 0 4px}
+  .puces.defile .defile__piste{animation:defile 18s linear infinite}
+  .puces.defile .puce{margin-right:8px;white-space:nowrap}
+  .maison .hote p{font-size:13.5px}
+  .maison .hote small{font-size:12.5px}
+
+    #chambres .section__tete p{display:none}
+  .chambres-bloc{display:flex;flex-direction:column;gap:20px}
+  .chambres-bloc .chcar{order:-1}
+
+    .cases--4{display:flex;grid-template-columns:none;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:6px 0 22px;margin:-6px 0 -22px}
+  .cases--4::-webkit-scrollbar{display:none}
+  .cases--4 .case{flex:0 0 100%;scroll-snap-align:start;box-shadow:0 6px 18px rgba(23,47,71,.16)}
+  .cases--4 .case:hover,.cases--4 .case:focus-visible{transform:none;box-shadow:0 6px 18px rgba(23,47,71,.16)}
+  .cases-fl,.cases-fl[hidden]{display:grid!important;place-items:center;width:42px;height:42px;font-size:26px;line-height:1;top:50%}
+  .cases-fl.fleche--g{left:8px}.cases-fl.fleche--d{right:8px}
+
+    .panneaux{flex-direction:column;height:auto;gap:0}
+  .panneau{flex:none;height:156px;margin-top:-30px;transition:height .6s cubic-bezier(.2,.8,.2,1);box-shadow:0 -6px 16px rgba(0,0,0,.28)}
+  .panneau:nth-child(1){margin-top:0;z-index:1;box-shadow:none}
+  .panneau:nth-child(2){z-index:2}.panneau:nth-child(3){z-index:3}.panneau:nth-child(4){z-index:4}
+  .panneau.est-ouvert{flex:none;height:400px;z-index:6}
+  .panneau__num{top:42px}
+  .panneau:nth-child(1) .panneau__num{top:20px}
+  .panneau__txt{bottom:40px;transition:bottom .6s cubic-bezier(.2,.8,.2,1)}
+  .panneau.est-ouvert .panneau__txt{bottom:24px}
+  .panneau.est-ouvert .panneau__num{top:42px}
+  .panneau:nth-child(1).est-ouvert .panneau__num{top:20px}
+  #experiences:after{left:auto;right:20px;bottom:16px;width:70px;height:70px}
+  #experiences:before{left:20px;right:auto;bottom:16px;width:54px;height:54px}
+
+    .galerie--replie>button:nth-child(n+7){display:none}
+  .galerie__plus{display:block}
+  .galerie__plus .btn{gap:10px}
+  .galerie__plus .btn svg{transition:transform .25s}
+  .galerie__plus .btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+  #galerie:after{left:auto;right:20px;bottom:18px;width:84px;height:84px}
+
+    .car-fen{position:relative}
+  .car-fen .activites,.car-fen .avis__grille{display:flex;grid-template-columns:none;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:var(--rayon)}
+  .car-fen .activites::-webkit-scrollbar,.car-fen .avis__grille::-webkit-scrollbar{display:none}
+  .car-fen .activite,.car-fen .avis-carte{flex:0 0 100%;scroll-snap-align:start}
+  .car-fen .activite{min-height:380px}
+  .car-fen .avis-carte{padding:24px 56px}
+  .car-fl{display:grid;place-items:center;position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:42px;height:42px;border-radius:50%;border:0;background:#fff;color:var(--nuit);font-size:26px;line-height:1;cursor:pointer;box-shadow:var(--ombre)}
+  .car-fl--g{left:8px}.car-fl--d{right:8px}
+  #activites:before{display:none}
+  #activites .centre{position:relative}
+  #activites .centre:before{content:"";position:absolute;left:6px;top:50%;width:50px;height:50px;margin-top:-25px;background:url(../images/chataigne.webp) center/contain no-repeat;transform:rotate(-14deg);pointer-events:none}
+
+    .marches__liste li{padding-left:54px}
+
+    .avis__plateformes.defile{display:block;overflow:hidden;flex:1 1 100%;min-width:0;width:100%}
+  .avis__plateformes.defile .defile__piste{animation:defile 20s linear infinite}
+  .avis__plateformes.defile .puce{margin-right:10px;white-space:nowrap}
+
+    .contact__grille{display:flex;flex-direction:column;gap:28px}
+  .contact__gauche{display:contents}
+  .contact__gauche .infos{order:1}
+  .contact__grille .demande{order:2}
+  .contact__gauche .avis-defile{order:3;flex:none}
+  form.demande .btn{justify-content:center}
+
+    .menu{inset:74px 12px auto 12px;padding:14px}
+  .menu a{padding:19px 20px;font-size:21px}
+}
+@media(max-width:700px) and (prefers-reduced-motion:reduce){
+  .defile__piste{animation:none!important}
+  .defile{overflow-x:auto!important}
+  .defile [data-clone]{display:none}
+}
+
