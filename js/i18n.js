@@ -239,6 +239,10 @@
 "Le séjour vu depuis l'entrée":"The living room seen from the entrance",
 "Le séjour et son coin salon":"The living room and its lounge area",
 "Le sauna vu de l'intérieur, avec son poêle à bois":"The sauna seen from the inside, with its wood stove",
+"Mentions légales":"Legal notice",
+"Politique de confidentialité":"Privacy policy",
+"Plan du site":"Site map",
+"Les informations saisies sont utilisées par Lydie Monnet uniquement pour répondre à votre demande. Elles sont envoyées depuis votre messagerie et conservées 3 ans après le dernier échange. Vous pouvez y accéder, les faire corriger ou supprimer en écrivant à lydmonnet05@gmail.com.":"The information you enter is used by Lydie Monnet only to answer your request. It is sent from your own email app and kept for 3 years after the last exchange. You can access it, correct it or have it deleted by writing to lydmonnet05@gmail.com.",
 "Le poêle à bois du séjour":"The living room wood stove",
 "Salon avec canapé et mur en bois":"Lounge with sofa and wooden wall",
 "Le salon et son éclairage":"The lounge and its lighting",
@@ -280,8 +284,6 @@
 "« Lydie est réactive et arrangeante. Il n'y a pas de vis-à-vis et le logement est très calme. […] Four à pizza parfaitement fonctionnel. »":"“Lydie is responsive and accommodating. There are no overlooking neighbours and the home is very quiet. […] Pizza oven in perfect working order.”",
 "« Maison fidèle à la description. Tout y est pour passer un agréable séjour. »":"“House true to the description. Everything is there for a pleasant stay.”",
 "« Super séjour dans ce petit coin de paradis très bien équipé, il ne manque rien. Lydie est une hôte très arrangeante. »":"“Great stay in this little corner of paradise, very well equipped, nothing is missing. Lydie is a very accommodating host.”",
-"J'accepte que mes informations soient utilisées pour me recontacter au sujet de ma demande.":"I agree that my information may be used to contact me about my request.",
-"Cochez cette case pour envoyer votre question.":"Tick this box to send your question.",
 "Arrivée":"Arrival","Départ":"Departure","Aller à ":"Go to "
   };
   var K={};Object.keys(D).forEach(function(k){K[k.replace(/\s+/g,' ')]=D[k]});

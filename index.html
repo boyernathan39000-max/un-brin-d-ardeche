@@ -6,9 +6,8 @@
 <title>Brin d'Ardèche : maison avec sauna et cabane tonneau à Saint-Prix</title>
 <meta name="description" content="Maison de campagne pour 8 personnes à Saint-Prix, dans les Monts d'Ardèche, avec sauna au bois, cabane tonneau, four à pizza et Dolce Via à moins de 1 km.">
 <link rel="preload" as="image" href="images/vue-loin.jpg" fetchpriority="high">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Courgette&display=swap" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff2" href="fonts/albert-sans-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/courgette-latin.woff2" crossorigin>
 <style>
 /* indispensable : la page d'ouverture ne s'affiche jamais sans sa mise en forme, même si la feuille de style est en cache */
 .intro{display:none}
@@ -17,7 +16,7 @@
 .intro__fond{position:absolute;inset:0;background-size:cover}
 .avis-pastille,.avis-carte,.avis__lien,.puce--lien{text-decoration:none}
 </style>
-<link rel="stylesheet" href="css/style.css?v=20261026zg">
+<link rel="stylesheet" href="css/style.css?v=20261027a">
 </head>
 <body>
 <script>if(!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches))document.documentElement.classList.add('intro-actif')</script>
@@ -274,8 +273,7 @@
           <label class="champ">Courriel<input name="mail" type="email" required autocomplete="email"></label>
           <label class="champ champ--pleine">Votre question<textarea name="message" rows="5" required></textarea></label>
         </div>
-        <label class="accord"><input type="checkbox" name="accord" required><span>J'accepte que mes informations soient utilisées pour me recontacter au sujet de ma demande.</span></label>
-        <p class="accord__err" id="accord-err" role="alert" hidden>Cochez cette case pour envoyer votre question.</p>
+        <p class="form-rgpd">Les informations saisies sont utilisées par Lydie Monnet uniquement pour répondre à votre demande. Elles sont envoyées depuis votre messagerie et conservées 3 ans après le dernier échange. Vous pouvez y accéder, les faire corriger ou supprimer en écrivant à lydmonnet05@gmail.com. <a href="politique-confidentialite.html">Politique de confidentialité</a></p>
         <button class="btn" type="submit">Envoyer ma question</button>
         <p class="demande__ok" id="ok">Votre messagerie s'ouvre avec votre question prête à envoyer.</p>
       </form>
@@ -287,6 +285,7 @@
   <div class="wrap pied__in">
     <div><b>Brin d'Ardèche</b>655 chemin de la Chabanne, 07270 Saint-Prix (Ardèche)</div>
     <div>Téléphone : <a href="tel:+33667814684">06 67 81 46 84</a><br>Courriel : <a href="mailto:lydmonnet05@gmail.com">lydmonnet05@gmail.com</a></div>
+    <div class="pied__bas"><a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Politique de confidentialité</a> · <a href="plan-du-site.html">Plan du site</a></div>
   </div>
 </footer>
 
@@ -309,7 +308,7 @@
 
 
 
-<script src="js/i18n.js?v=20261026zg"></script>
-<script src="js/main.js?v=20261026zg"></script>
+<script src="js/i18n.js?v=20261027a"></script>
+<script src="js/main.js?v=20261027a"></script>
 </body>
 </html>

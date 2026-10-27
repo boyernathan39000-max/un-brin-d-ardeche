@@ -136,7 +136,6 @@
   $('#question').addEventListener('submit',function(e){
     e.preventDefault();var f=e.target,v=function(n){return f.elements[n].value.trim()};
     if(!v('nom')||!v('mail')||!v('message')){f.elements[!v('nom')?'nom':!v('mail')?'mail':'message'].focus();return}
-    var err=$('#accord-err');if(!f.elements.accord.checked){err.hidden=false;f.elements.accord.focus();return}err.hidden=true;
     window.location.href='mailto:lydmonnet05@gmail.com?subject='+encodeURIComponent(L.T('Question avant réservation'))+'&body='+encodeURIComponent((EN()?'Name: ':'Nom : ')+v('nom')+(EN()?'\nEmail: ':'\nCourriel : ')+v('mail')+'\n\n'+v('message'));
     $('#ok').style.display='block';
   });
