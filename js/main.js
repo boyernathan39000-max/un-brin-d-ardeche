@@ -282,15 +282,3 @@
     });
   }
 })();
-
-/* FAQ : trois questions, puis Voir plus / Voir moins */
-(function(){
-  var l=document.getElementById('faq-liste'),b=document.getElementById('faq-plus');
-  if(!l||!b)return;
-  b.addEventListener('click',function(){
-    var rep=l.classList.toggle('faq--replie');
-    b.setAttribute('aria-expanded',rep?'false':'true');
-    b.querySelector('.g-plus').hidden=!rep;b.querySelector('.g-moins').hidden=rep;
-    if(rep){var y=l.getBoundingClientRect().top+window.scrollY-110;window.scrollTo({top:y,behavior:'smooth'})}
-  });
-})();
